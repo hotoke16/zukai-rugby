@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>図解ラグビー</title>
+  <meta name="description" content="ラグビー未経験の観戦者からラグビー経験者、現役レフリー向けの細かいルールまでわかりやすく図解で紹介します。" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&family=Yusei+Magic&display=swap" rel="stylesheet">
+  
+  <link rel="icon" href="./img/favicon.png" type="image/jpeg">
+  
+  <!-- スタイルシート -->
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7FBVVCHYGY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7FBVVCHYGY');
+</script>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container">
+        <a  href="index.html" class="header__logo"><img src="./img/fv.jpg" alt="" class="header__logo-img"></a>
+        <button type="button" id="js-button-drawer" class="header__menu-button">Menu</button>
+
+        <div id="js-drawer" class="header__contents">
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-item">
+                <a href="index.html" class="header__nav-link button">
+                  <span class="header__nav-text header__home">HOME</span>
+                </a>
+              </li>
+              <li class="header__nav-item">
+                <a href="kick.html" class="header__nav-link button">
+                  <img src="./img/kick.jpg" alt="キック" class="header__nav-img">
+                  <span class="header__button-text">キック</span>
+                </a>
+              </li>
+              <li class="header__nav-item">
+                <a href="ruck.html" class="header__nav-link button">
+                  <img src="./img/ruck.jpg" alt="ラック" class="header__nav-img">
+                  <span class="header__button-text">ラック</span>
+                </a>
+              </li>
+              <li class="header__nav-item">
+                <a href="maul.html" class="header__nav-link button">
+                  <img src="./img/maul.jpg" alt="モール" class="header__nav-img">
+                  <span class="header__button-text">モール</span>
+                </a>
+              </li>
+              <li class="header__nav-item">
+                <a href="scrum.html" class="header__nav-link button">
+                  <img src="./img/scrum.jpg" alt="スクラム" class="header__nav-img">
+                  <span class="header__button-text">スクラム</span>
+                </a>
+              </li>
+              <li class="header__nav-item">
+                <a href="lineout.html" class="header__nav-link button">
+                  <img src="./img/lineout.jpg" alt="ラインアウト" class="header__nav-img">
+                  <span class="header__button-text">ラインアウト</span>
+                </a>
+              </li>
+              <li class="header__nav-item">
+                <a href="pena.html" class="header__nav-link button">
+                  <img src="./img/pena.jpg" alt="反則" class="header__nav-img">
+                  <span class="header__button-text">反則</span>
+                </a>
+              </li>
+              <li class="header__nav-item">
+                <a href="try.html" class="header__nav-link button">
+                  <img src="./img/try.jpg" alt="トライエリア" class="header__nav-img">
+                  <span class="header__button-text">トライエリア</span>
+                </a>
+              </li>
+              <li class="header__nav-item">
+                <a href="touch.html" class="header__nav-link button">
+                  <img src="./img/touch.jpg" alt="タッチライン" class="header__nav-img">
+                  <span class="header__button-text">タッチライン</span>
+                </a>
+              </li>
+              <li class="header__nav-item">
+                <a href="https://x.com/zukai_rugby" class="header__nav-link button button--border">
+                  <img src="./img/X.png" alt="" class="header__nav-img header__x-img">
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <h1 class="main__title">モールについて</h1>
+      <section id="explanation" class="section explanation">
+        <div class="section__inner">
+          <h2 class="section__head">
+            <span class="section__head-main">モール成立の条件</span>
+          </h2>
+          <div class="section__content">
+            <div class="triple">
+              <img src="./img/33.モール成立 (1).jpg" alt="15人" class="section__img">
+              <img src="./img/33.モール成立 (2).jpg" alt="15人" class="section__img">
+              <img src="./img/33.モール成立 (3).jpg" alt="15人" class="section__img">
+            </div>
+            <p class="section__lead-text">モールは、ボールを持っているプレイヤーが立った状態で、各チーム1人以上が組み合えば成立する。モール成立後は、ディフェンス側は相手の足をもつなど、モールを崩す行為をしてはならない。</p>
+          </div>
+        </div>
+        <div class="section__inner">
+          <h2 class="section__head">
+            <span class="section__head-main">モールのメリット</span>
+          </h2>
+          <div class="section__content">
+            <div class="triple">
+              <img src="./img/86.モール詳細 (1).jpg" alt="" class="section__img">
+              <img src="./img/86.モール詳細 (2).jpg" alt="" class="section__img">
+              <img src="./img/86.モール詳細 (3).jpg" alt="" class="section__img">
+            </div>
+            <p class="section__lead-text">モールは、ボールを持っているプレイヤーが立った状態で、各チーム1人以上が組み合えば成立する。モール成立後はアタック側はボールを後ろへ送ることができ、最後尾のプレイヤーにボールが渡れば、ディフェンスと直接ボールキャリアが触れない状態でボールを進めることができる。</p>
+          </div>
+        </div>
+        <div class="section__inner">
+          <h2 class="section__head">
+            <span class="section__head-main">モールの参加条件</span>
+          </h2>
+          <div class="section__content">
+            <div class="triple">
+              <img src="./img/75.モール参加方法 (1).jpg" alt="" class="section__img">
+              <img src="./img/75.モール参加方法 (2).jpg" alt="" class="section__img">
+              <img src="./img/75.モール参加方法 (3).jpg" alt="" class="section__img">
+            </div>
+            <p class="section__lead-text">モールに参加するには自陣側からでなくてはならない。横からあるいは前から参加した場合はオフサイドになる。</p>
+          </div>
+        </div>
+        <div class="section__inner">
+          <h2 class="section__head">
+            <span class="section__head-main">モールの継続条件</span>
+          </h2>
+          <div class="section__content">
+            <div class="quadruple">
+              <img src="./img/76.モール 継続条件 (1).jpg" alt="" class="section__img">
+              <img src="./img/76.モール 継続条件 (2).jpg" alt="" class="section__img">
+              <img src="./img/76.モール 継続条件 (3).jpg" alt="" class="section__img">
+              <img src="./img/76.モール 継続条件 (4).jpg" alt="" class="section__img">
+            </div>
+            <p class="section__lead-text">モールは進んでいる限り、押し続けることができる。1度止まっても5秒以内に再び押し進められればモールは継続され、2度止まったら5秒以内にボールを出さなければならない。出せない場合は相手ボールスクラムになる。</p>
+          </div>
+        </div>
+        <div class="section__inner">
+          <h2 class="section__head">
+            <span class="section__head-main">モールアンプレアブル</span>
+          </h2>
+          <div class="section__content">
+            <div class="triple">
+              <img src="./img/78.モールアンプレアブル (1).jpg" alt="" class="section__img">
+              <img src="./img/78.モールアンプレアブル (2).jpg" alt="" class="section__img">
+              <img src="./img/78.モールアンプレアブル (3).jpg" alt="" class="section__img">
+            </div>
+            <p class="section__lead-text">モール中、ボールが出せない状況になった（モールアンプレアブル）場合、相手ボールスクラムで再開される。</p>
+          </div>
+        </div>
+        <div class="section__inner">
+          <h2 class="section__head">
+            <span class="section__head-main">モールオブストラクション</span>
+          </h2>
+          <div class="section__content">
+            <div class="triple">
+              <img src="./img/87.モールオブストラクション (1).jpg" alt="" class="section__img">
+              <img src="./img/87.モールオブストラクション (2).jpg" alt="" class="section__img">
+              <img src="./img/87.モールオブストラクション (3).jpg" alt="" class="section__img">
+            </div>
+            <p class="section__lead-text">モールは、ボールを持っているプレイヤーが立った状態で、各チーム1人以上が組み合えば成立する。モール成立後はボールを後ろへ送ることができるが、モール成立（相手と組み合う）前にボールを後方へ送ってしまうとオブストラクションの反則となる。</p>
+          </div>
+        </div>
+        <div class="section__inner">
+          <h2 class="section__head">
+            <span class="section__head-main">モールオフサイド</span>
+          </h2>
+          <div class="section__content">
+            <div class="double">
+              <img src="./img/79.モールオフサイド (1).jpg" alt="" class="section__img">
+              <img src="./img/79.モールオフサイド (2).jpg" alt="" class="section__img">
+            </div>
+            <p class="section__lead-text">モールのオフサイドラインは参加者の最後尾の足であるが、足がゴールラインを超えた場合、ゴールラインがオフサイドラインになる。</p>
+          </div>
+        </div>
+        <div class="section__inner">
+          <h2 class="section__head">
+            <span class="section__head-main">モールをかきわける</span>
+          </h2>
+          <div class="section__content">
+            <div class="triple">
+              <img src="./img/77.モール かき分け(1).jpg" alt="" class="section__img">
+              <img src="./img/77.モール かき分け(2).jpg" alt="" class="section__img">
+              <img src="./img/77.モール かき分け(3).jpg" alt="" class="section__img">
+            </div>
+            <p class="section__lead-text">モールに自陣側から参加していれは、密集をかき分けて前に進んでもよい。</p>
+          </div>
+        </div>
+
+        <div class="share">
+          <ul class="share__wrapper">
+            <li class="share__list">
+              <div class="share__contents">
+                <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fzukai-rugby.com&text=図解ラグビー-世界一わかりやすいと言われたいラグビー解説サイト-" target="_blank" rel="noopener noreferrer">
+                  <img src="./img/X.png" alt="" class="share__img no-modal">
+                </a>
+              </div>
+              <div class="share__text">シェア</div>
+            </li>
+            <li class="share__list">
+              <div class="share__contents">
+                <a href="contact.html" target="_blank" rel="noopener noreferrer">
+                  <img src="./img/contact.png" alt="" class="share__img no-modal">
+                </a>
+              </div>
+              <div class="share__text">問い合わせ</div>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <img src="" alt="拡大画像">
+            <button class="nav-button prev">&#10094;</button>
+            <button class="nav-button next">&#10095;</button>
+            <p class="modal__lead-text"></p>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="footer__title">
+          <a href="index.html" class="footer__title-link">図解ラグビー</a>
+        </div>
+        <div class="footer__contents">
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item">
+              <a href="kick.html" class="footer__nav-link button">
+                <img src="./img/kick.jpg" alt="キック" class="footer__nav-img">
+                <span class="footer__button-text">キック</span>
+              </a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="ruck.html" class="footer__nav-link button">
+                <img src="./img/ruck.jpg" alt="ラック" class="footer__nav-img">
+                <span class="footer__button-text">ラック</span>
+              </a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="maul.html" class="footer__nav-link button">
+                <img src="./img/maul.jpg" alt="モール" class="footer__nav-img">
+                <span class="footer__button-text">モール</span>
+              </a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="scrum.html" class="footer__nav-link button">
+                <img src="./img/scrum.JPG" alt="スクラム" class="footer__nav-img">
+                <span class="footer__button-text">スクラム</span>
+              </a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#" class="footer__nav-link button">
+                <img src="./img/lineout.jpg" alt="ラインアウト" class="footer__nav-img">
+                <span class="footer__button-text">ラインアウト</span>
+              </a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="pena.html" class="footer__nav-link button">
+                <img src="./img/pena.jpg" alt="反則" class="footer__nav-img">
+                <span class="footer__button-text">反則</span>
+              </a>
+            </li>
+            <!-- <li class="footer__nav-item">
+              <a href="try.html" class="footer__nav-link button">
+                <img src="./img/try.JPG" alt="トライエリア" class="footer__nav-img">
+                <span class="footer__button-text">トライエリア</span>
+              </a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="touch.html" class="footer__nav-link button">
+                <img src="./img/touch.JPG" alt="タッチライン" class="footer__nav-img">
+                <span class="footer__button-text">タッチライン</span>
+              </a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="https://x.com/zukai_rugby" class="footer__nav-link button button--border">
+                <img src="./img/X.png" alt="" class="footer__nav-img footer__x-img">
+              </a>
+            </li> -->
+          </ul>
+        </div>
+      </footer>
+
+    </main>
+
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="./js/index.js"></script>
+</body>
+
+</html>

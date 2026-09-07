@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>トップに戻るボタン</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            height: 2000px; /* 長いページを作成 */
+            margin: 0;
+            padding: 0;
+        }
+        #back-to-top {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        footer {
+            position: relative;
+            height: 150px;
+            background: #333;
+            color: white;
+            text-align: center;
+            line-height: 150px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="back-to-top">↑</div>
+    <footer>フッター</footer>
+
+    <script>
+        $(document).ready(function() {
+            var $backToTop = $("#back-to-top");
+            var footerHeight = $("footer").outerHeight();
+            var windowHeight = $(window).height();
+
+            $(window).scroll(function() {
+                var scrollTop = $(window).scrollTop();
+                var documentHeight = $(document).height();
+                var bottomSpace = documentHeight - (scrollTop + windowHeight);
+
+                if (bottomSpace <= footerHeight + 20) { // フッターに近づいたら調整
+                    $backToTop.css("bottom", bottomSpace + 20 + "px");
+                } else {
+                    $backToTop.css("bottom", "20px");
+                }
+            });
+
+            // ボタンをクリックするとトップへスクロール
+            $backToTop.click(function() {
+                $("html, body").animate({ scrollTop: 0 }, 500);
+            });
+        });
+    </script>
+
+</body>
+</html>

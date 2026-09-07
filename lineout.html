@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>図解ラグビー</title>
+  <meta name="description" content="ラグビー未経験の観戦者からラグビー経験者、現役レフリー向けの細かいルールまでわかりやすく図解で紹介します。" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&family=Yusei+Magic&display=swap" rel="stylesheet">
+  
+  <link rel="icon" href="./img/favicon.png" type="image/jpeg">
+  
+  <!-- スタイルシート -->
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7FBVVCHYGY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7FBVVCHYGY');
+</script>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container">
+        <a  href="index.html" class="header__logo"><img src="./img/fv.jpg" alt="" class="header__logo-img"></a>
+        <button type="button" id="js-button-drawer" class="header__menu-button">Menu</button>
+
+        <div id="js-drawer" class="header__contents">
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-item">
+                <a href="index.html" class="header__nav-link button">
+                  <span class="header__nav-text header__home">HOME</span>
+                </a>
+              </li>
+              <li class="header__nav-item">
+                <a href="kick.html" class="header__nav-link button">
+                  <img src="./img/kick.jpg" alt="キック" class="header__nav-img">
+                  <span class="header__button-text">キック</span>
+                </a>
+              </li>
+              <li class="header__nav-item">
+                <a href="ruck.html" class="header__nav-link button">
+                  <img src="./img/ruck.jpg" alt="ラック" class="header__nav-img">
+                  <span class="header__button-text">ラック</span>
+                </a>
+              </li>
+              <li class="header__nav-item">
+                <a href="maul.html" class="header__nav-link button">
+                  <img src="./img/maul.jpg" alt="モール" class="header__nav-img">
+                  <span class="header__button-text">モール</span>
+                </a>
+              </li>
+              <li class="header__nav-item">
+                <a href="scrum.html" class="header__nav-link button">
+                  <img src="./img/scrum.jpg" alt="スクラム" class="header__nav-img">
+                  <span class="header__button-text">スクラム</span>
+                </a>
+              </li>
+              <li class="header__nav-item">
+                <a href="lineout.html" class="header__nav-link button">
+                  <img src="./img/lineout.jpg" alt="ラインアウト" class="header__nav-img">
+                  <span class="header__button-text">ラインアウト</span>
+                </a>
+              </li>
+              <li class="header__nav-item">
+                <a href="pena.html" class="header__nav-link button">
+                  <img src="./img/pena.jpg" alt="反則" class="header__nav-img">
+                  <span class="header__button-text">反則</span>
+                </a>
+              </li>
+              <li class="header__nav-item">
+                <a href="try.html" class="header__nav-link button">
+                  <img src="./img/try.jpg" alt="トライエリア" class="header__nav-img">
+                  <span class="header__button-text">トライエリア</span>
+                </a>
+              </li>
+              <li class="header__nav-item">
+                <a href="touch.html" class="header__nav-link button">
+                  <img src="./img/touch.jpg" alt="タッチライン" class="header__nav-img">
+                  <span class="header__button-text">タッチライン</span>
+                </a>
+              </li>
+              <li class="header__nav-item">
+                <a href="https://x.com/zukai_rugby" class="header__nav-link button button--border">
+                  <img src="./img/X.png" alt="" class="header__nav-img header__x-img">
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <h1 class="main__title">ラインアウトについて</h1>
+      <section id="explanation" class="section explanation">
+        <div class="section__inner">
+          <h2 class="section__head">
+            <span class="section__head-main">ラインアウトの立ち位置</span>
+          </h2>
+          <div class="section__content">
+            <div class="double">
+              <img src="./img/29.ラインアウト立ち位置 (1).jpg" alt="クラウチ" class="section__img">
+              <img src="./img/29.ラインアウト立ち位置 (2).jpg" alt="クラウチ" class="section__img">
+            </div>
+            <p class="section__lead-text">ラインアウト時のオフサイドラインは攻守ともにボールを投入するラインから10m後方になる。両チームともレシーバーを設置でき、味方から2m離れた位置に立たせることができる。ただし立てる位置は5mラインと15mラインの間である。</p>
+          </div>
+        </div>
+        <div class="section__inner">
+          <h2 class="section__head">
+            <span class="section__head-main">ラインアウトの参加人数</span>
+          </h2>
+          <div class="section__content">
+            <div class="triple">
+              <img src="./img/34.ラインアウト人数 (1).jpg" alt="" class="section__img">
+              <img src="./img/34.ラインアウト人数 (2).jpg" alt="" class="section__img">
+              <img src="./img/34.ラインアウト人数 (3).jpg" alt="" class="section__img">
+            </div>
+            <p class="section__lead-text">ラインアウトの参加人数はアタック側が自由に決めて良い（最低2人から）。ディフェンス側はアタック側が決めた人数以下にしなければならない。ディフェンス側が多く参加した場合、反則となりフリーキックが与えられる。</p>
+          </div>
+        </div>
+        <div class="section__inner">
+          <h2 class="section__head">
+            <span class="section__head-main">ラインアウトの終了</span>
+          </h2>
+          <div class="section__content">
+            <div class="quadruple">
+              <img src="./img/45.ラインアウトの終了 (1).jpg" alt="" class="section__img">
+              <img src="./img/45.ラインアウトの終了 (2).jpg" alt="" class="section__img">
+              <img src="./img/45.ラインアウトの終了 (3).jpg" alt="" class="section__img">
+              <img src="./img/45.ラインアウトの終了 (4).jpg" alt="" class="section__img">
+            </div>
+            <p class="section__lead-text">ラインアウトが終了したら、オフサイドラインは解消される。終了のタイミングは以下の通り。<br/>
+              ・5mラインと15mラインの間からボールが出る<br/>
+              ・マークオブタッチからボールが出る<br/>
+              ・ラインアウト参加プレイヤーの足がマークオブタッチを超える</p>
+          </div>
+        </div>
+        <div class="section__inner">
+          <h2 class="section__head">
+            <span class="section__head-main">ノットストレート</span>
+          </h2>
+          <div class="section__content">
+            <div class="quadruple">
+              <img src="./img/39.ノットストレート (1).jpg" alt="" class="section__img">
+              <img src="./img/39.ノットストレート (2).jpg" alt="" class="section__img">
+              <img src="./img/39.ノットストレート (3).jpg" alt="" class="section__img">
+              <img src="./img/39.ノットストレート (4).jpg" alt="" class="section__img">
+            </div>
+            <p class="section__lead-text">ラインアウトでは、ボールをまっすぐに投げなければならない。ボールが曲がってしまった場合、ノットストレートとなり、相手ボールになる。相手チームはラインアウトか15mライン上のスクラムでの再開を選ぶことができる。</p>
+          </div>
+        </div>
+        <div class="section__inner">
+          <h2 class="section__head">
+            <span class="section__head-main">ノット1m</span>
+          </h2>
+          <div class="section__content">
+            <div class="quadruple">
+              <img src="./img/64.ノット1m (1).jpg" alt="" class="section__img">
+              <img src="./img/64.ノット1m (2).jpg" alt="" class="section__img">
+              <img src="./img/64.ノット1m (3).jpg" alt="" class="section__img">
+              <img src="./img/64.ノット1m (4).jpg" alt="" class="section__img">
+            </div>
+            <p class="section__lead-text">ラインアウトでは、マークオブタッチ（中心線）から両チームそれぞれ50cm開き、1mの距離をあけなければならない。1mの距離をあけていない場合は、相手にフリーキックが与えられる。</p>
+          </div>
+        </div>
+        <div class="section__inner">
+          <h2 class="section__head">
+            <span class="section__head-main">スローフェイント</span>
+          </h2>
+          <div class="section__content">
+            <div class="quadruple">
+              <img src="./img/65.スローフェイント (1).jpg" alt="" class="section__img">
+              <img src="./img/65.スローフェイント (2).jpg" alt="" class="section__img">
+              <img src="./img/65.スローフェイント (3).jpg" alt="" class="section__img">
+              <img src="./img/65.スローフェイント (4).jpg" alt="" class="section__img">
+            </div>
+            <p class="section__lead-text">ラインアウトでは、攻撃側はボールを投げるふり（フェイント）をしてはならない。投げるふりをした場合、相手にフリーキックが与えられる。</p>
+          </div>
+        </div>
+        <div class="section__inner">
+          <h2 class="section__head">
+            <span class="section__head-main">ノット5m</span>
+          </h2>
+          <div class="section__content">
+            <div class="quadruple">
+              <img src="./img/66.ノット5m (1).jpg" alt="" class="section__img">
+              <img src="./img/66.ノット5m (2).jpg" alt="" class="section__img">
+              <img src="./img/66.ノット5m (3).jpg" alt="" class="section__img">
+              <img src="./img/66.ノット5m (4).jpg" alt="" class="section__img">
+            </div>
+            <p class="section__lead-text">ラインアウトでは、攻撃側はボールを5mラインを超えるように投げなければならない。ボールが5mラインを超えなかったら、相手にフリーキックが与えられる。</p>
+          </div>
+        </div>
+        <div class="section__inner">
+          <h2 class="section__head">
+            <span class="section__head-main">ロングスロー</span>
+          </h2>
+          <div class="section__content">
+            <div class="quadruple">
+              <img src="./img/84.ロングスロー (1).jpg" alt="" class="section__img">
+              <img src="./img/84.ロングスロー (2).jpg" alt="" class="section__img">
+              <img src="./img/84.ロングスロー (3).jpg" alt="" class="section__img">
+              <img src="./img/84.ロングスロー (4).jpg" alt="" class="section__img">
+            </div>
+            <p class="section__lead-text">ラインアウトのオフサイドライン解消のタイミングは、ラインアウト終了時であるが、15mラインを超えるスローがされる場合、スローされた瞬間に前に出て良い（15mラインを越えなかった場合はオフサイドラインが適応される）。</p>
+          </div>
+        </div>
+        <div class="section__inner">
+          <h2 class="section__head">
+            <span class="section__head-main">ラインアウトモール</span>
+          </h2>
+          <div class="section__content">
+            <div class="quadruple">
+              <img src="./img/88.ラインアウト後 (1).jpg" alt="" class="section__img">
+              <img src="./img/88.ラインアウト後 (2).jpg" alt="" class="section__img">
+              <img src="./img/88.ラインアウト後 (3).jpg" alt="" class="section__img">
+              <img src="./img/88.ラインアウト後 (4).jpg" alt="" class="section__img">
+            </div>
+            <p class="section__lead-text">ラインアウトでボールを確保してからモールを組むことがある。ボールを確保して着地した瞬間はモールが成立していないので、ディフェンス側は相手と組み合ってモールを止めにいくか、組み合う前にかたまりを引き倒してしまうか、あえて何もしないかを選択することができる。</p>
+          </div>
+        </div>
+        <div class="section__inner">
+          <h2 class="section__head">
+            <span class="section__head-main">クイックスタート</span>
+          </h2>
+          <div class="section__content">
+            <div class="triple">
+              <img src="./img/52.クイックリスタート (1).jpg" alt="" class="section__img">
+              <img src="./img/52.クイックリスタート (2).jpg" alt="" class="section__img">
+              <img src="./img/52.クイックリスタート (3).jpg" alt="" class="section__img">
+            </div>
+            <p class="section__lead-text">ボールが外に出たらラインアウトで試合は再開されるが、ボールが出た地点より後方からすみやかに5mラインを超えるようにグラウンド内側の味方へパスをすれば、すぐに試合を再開できる。</p>
+          </div>
+        </div>
+        <div class="section__inner">
+          <h2 class="section__head">
+            <span class="section__head-main">15mラインを越えてリフト</span>
+          </h2>
+          <div class="section__content">
+            <div class="quadruple">
+              <img src="./img/94.15mラインを越えてリフト (1).jpg" alt="" class="section__img">
+              <img src="./img/94.15mラインを越えてリフト (2).jpg" alt="" class="section__img">
+              <img src="./img/94.15mラインを越えてリフト (3).jpg" alt="" class="section__img">
+              <img src="./img/94.15mラインを越えてリフト (4).jpg" alt="" class="section__img">
+            </div>
+            <p class="section__lead-text">ラインアウトはアタック側のラインアウト参加プレイヤーが5mラインと15mラインを超えてプレーしたら、解消される。15mラインを超えてリフトされたら、解消となる。</p>
+          </div>
+        </div>
+
+        <div class="share">
+          <ul class="share__wrapper">
+            <li class="share__list">
+              <div class="share__contents">
+                <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fzukai-rugby.com&text=図解ラグビー-世界一わかりやすいと言われたいラグビー解説サイト-" target="_blank" rel="noopener noreferrer">
+                  <img src="./img/X.png" alt="" class="share__img no-modal">
+                </a>
+              </div>
+              <div class="share__text">シェア</div>
+            </li>
+            <li class="share__list">
+              <div class="share__contents">
+                <a href="contact.html" target="_blank" rel="noopener noreferrer">
+                  <img src="./img/contact.png" alt="" class="share__img no-modal">
+                </a>
+              </div>
+              <div class="share__text">問い合わせ</div>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <img src="modal" alt="拡大画像">
+            <button class="nav-button prev">&#10094;</button>
+            <button class="nav-button next">&#10095;</button>
+            <p class="modal__lead-text"></p>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="footer__title">
+          <a href="index.html" class="footer__title-link">図解ラグビー</a>
+        </div>
+        <div class="footer__contents">
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item">
+              <a href="kick.html" class="footer__nav-link button">
+                <img src="./img/kick.jpg" alt="キック" class="footer__nav-img">
+                <span class="footer__button-text">キック</span>
+              </a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="ruck.html" class="footer__nav-link button">
+                <img src="./img/ruck.jpg" alt="ラック" class="footer__nav-img">
+                <span class="footer__button-text">ラック</span>
+              </a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="maul.html" class="footer__nav-link button">
+                <img src="./img/maul.jpg" alt="モール" class="footer__nav-img">
+                <span class="footer__button-text">モール</span>
+              </a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="scrum.html" class="footer__nav-link button">
+                <img src="./img/scrum.JPG" alt="スクラム" class="footer__nav-img">
+                <span class="footer__button-text">スクラム</span>
+              </a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#" class="footer__nav-link button">
+                <img src="./img/lineout.jpg" alt="ラインアウト" class="footer__nav-img">
+                <span class="footer__button-text">ラインアウト</span>
+              </a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="pena.html" class="footer__nav-link button">
+                <img src="./img/pena.jpg" alt="反則" class="footer__nav-img">
+                <span class="footer__button-text">反則</span>
+              </a>
+            </li>
+            <!-- <li class="footer__nav-item">
+              <a href="try.html" class="footer__nav-link button">
+                <img src="./img/try.JPG" alt="トライエリア" class="footer__nav-img">
+                <span class="footer__button-text">トライエリア</span>
+              </a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="touch.html" class="footer__nav-link button">
+                <img src="./img/touch.JPG" alt="タッチライン" class="footer__nav-img">
+                <span class="footer__button-text">タッチライン</span>
+              </a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="https://x.com/zukai_rugby" class="footer__nav-link button button--border">
+                <img src="./img/X.png" alt="" class="footer__nav-img footer__x-img">
+              </a>
+            </li> -->
+          </ul>
+        </div>
+      </footer>
+
+    </main>
+
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="./js/index.js"></script>
+</body>
+
+</html>

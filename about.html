@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>図解ラグビー</title>
+    <meta name="description" content="ラグビー未経験の観戦者からラグビー経験者、現役レフリー向けの細かいルールまでわかりやすく図解で紹介します。"/>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&family=Yusei+Magic&display=swap" rel="stylesheet"/>
+
+    <link rel="icon" href="./img/favicon.png" type="image/jpeg" />
+
+    <!-- スタイルシート -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5153873867460431" crossorigin="anonymous"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-7FBVVCHYGY"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-7FBVVCHYGY");
+    </script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <a href="index.html" class="header__logo"
+            ><img src="./img/fv.jpg" alt="" class="header__logo-img"
+          /></a>
+          <button type="button" id="js-button-drawer" class="header__menu-button">
+            Menu
+          </button>
+
+          <div id="js-drawer" class="header__contents">
+            <nav class="header__nav">
+              <ul class="header__nav-list">
+                <li class="header__nav-item">
+                  <a href="index.html" class="header__nav-link button">
+                    <span class="header__nav-text header__home">HOME</span>
+                  </a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="kick.html" class="header__nav-link button">
+                    <img src="./img/kick.jpg" alt="キック" class="header__nav-img"/>
+                    <span class="header__button-text">キック</span>
+                  </a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="ruck.html" class="header__nav-link button">
+                    <img src="./img/ruck.jpg" alt="ラック" class="header__nav-img"/>
+                    <span class="header__button-text">ラック</span>
+                  </a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="maul.html" class="header__nav-link button">
+                    <img
+                      src="./img/maul.jpg"
+                      alt="モール"
+                      class="header__nav-img"
+                    />
+                    <span class="header__button-text">モール</span>
+                  </a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="scrum.html" class="header__nav-link button">
+                    <img
+                      src="./img/scrum.jpg"
+                      alt="スクラム"
+                      class="header__nav-img"
+                    />
+                    <span class="header__button-text">スクラム</span>
+                  </a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="lineout.html" class="header__nav-link button">
+                    <img
+                      src="./img/lineout.jpg"
+                      alt="ラインアウト"
+                      class="header__nav-img"
+                    />
+                    <span class="header__button-text">ラインアウト</span>
+                  </a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="pena.html" class="header__nav-link button">
+                    <img
+                      src="./img/pena.jpg"
+                      alt="反則"
+                      class="header__nav-img"
+                    />
+                    <span class="header__button-text">反則</span>
+                  </a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="try.html" class="header__nav-link button">
+                    <img
+                      src="./img/try.jpg"
+                      alt="トライエリア"
+                      class="header__nav-img"
+                    />
+                    <span class="header__button-text">トライエリア</span>
+                  </a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="touch.html" class="header__nav-link button">
+                    <img
+                      src="./img/touch.jpg"
+                      alt="タッチライン"
+                      class="header__nav-img"
+                    />
+                    <span class="header__button-text">タッチライン</span>
+                  </a>
+                </li>
+                <li class="header__nav-item">
+                  <a
+                    href="https://x.com/zukai_rugby"
+                    class="header__nav-link button button--border"
+                  >
+                    <img
+                      src="./img/X.png"
+                      alt=""
+                      class="header__nav-img header__x-img"
+                    />
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <h1 class="main__title">図解ラグビーとは？？</h1>
+        <section id="explanation" class="section explanation">
+          <div class="section__inner">
+            <h2 class="section__head">
+              <span class="section__head-main">世界一わかりやすいと言われたいラグビー解説サイトへようこそ！！</span>
+            </h2>
+            <div class="single">
+              <img src="./img/ほとけ.jpg" alt="" class="prof">
+            </div>
+            <p class="section__lead-text">ラグビーのコーチ兼レフリーしているほとけと申します。<br />
+              選手たちはラグビーが大好きにもかかわらず、意外とルールを深く理解していない場面が多くあることに気づきました。<br />
+              その現状をどうにかしたいという思いから、X（旧Twitter）でラグビーのルール解説を始めました。<br />
+              おかげさまでフォロワーは5,000人を超え、多くの方に見ていただけるようになりました。ありがとうございます！<br />
+              イラストとサイト制作は趣味で、当サイトの解説イラストやページもすべて自作しています。<br />
+              今後もラグビー界の発展に少しでも貢献できるよう、活動を続けていきたいと思っています。どうぞ応援よろしくお願いいたします！
+            </p>
+          </div>
+          <div class="section__inner">
+            <h2 class="section__head">
+              <span class="section__head-main">図解でわかる！ラグビールールクイズ！中級レベル 総合編 30問 2,980円</span>
+            </h2>
+            <a href="https://ifdsawe6uow1rurjl6zq.stores.jp/items/69dea8d6a6f4f828e3f7c7be">
+              <div class="single">
+                <img src="./img/中級総合.jpg" alt="" class="section__img">
+              </div>
+            </a>
+            <p class="section__lead-text">図解とクイズでわかりやすくラグビーのルールを学べることができる教材も販売しております（画像をクリック）。<br />
+              本教材は、図解とクイズを通してラグビーのルールを“本質から理解できる”ように設計されたPDF教材です<br />
+              この教材を読むと・・・<br />
+              プレイヤーは、より早いプレッシャーを相手へかけられたり、反則を回避できるようになったり、プレーの質が向上するはずです。<br />
+              観戦者は、「今の反則は〇〇だから・・・」「いや、そこは〇〇した方がいいでしょ！」と画面の前でつぶやいているかもしれません。<br />
+              なお、初級レベルは <a href="https://line.me/R/ti/p/@580sszcg?oat_content=url&ts=11120633">LINE</a> 登録者限定で無料配布しておりますので、ぜひご登録ください。
+            </p>
+          </div>
+          <div class="section__inner">
+            <h2 class="section__head">
+              <span class="section__head-main">当サイトの見方について</span>
+            </h2>
+            <div class="section__content">
+              <div class="guide">
+                <a href="kick.html" class="guide__item">
+                  <img src="./img/kick.jpg" alt="15人" class="section__img guide__img"/>
+                  <div class="guide__overlay">
+                    <span class="guide__text">キック</span>
+                  </div>
+                </a>
+                <a href="ruck.html" class="guide__item">
+                  <img src="./img/ruck.jpg" alt="15人" class="section__img" />
+                  <div class="guide__overlay">
+                    <span class="guide__text">ラック</span>
+                  </div>
+                </a>
+                <a href="maul.html" class="guide__item">
+                  <img src="./img/maul.jpg" alt="15人" class="section__img" />
+                  <div class="guide__overlay">
+                    <span class="guide__text">モール</span>
+                  </div>
+                </a>
+                <a href="scrum.html" class="guide__item">
+                  <img src="./img/scrum.jpg" alt="15人" class="section__img" />
+                  <div class="guide__overlay">
+                    <span class="guide__text">スクラム</span>
+                  </div>
+                </a>
+                <a href="lineout.html" class="guide__item">
+                  <img src="./img/lineout.jpg" alt="15人" class="section__img"/>
+                  <div class="guide__overlay">
+                    <span class="guide__text">ラインアウト</span>
+                  </div>
+                </a>
+                <a href="pena.html" class="guide__item">
+                  <img src="./img/pena.jpg" alt="15人" class="section__img" />
+                  <div class="guide__overlay">
+                    <span class="guide__text">反則</span>
+                  </div>
+                </a>
+                <a href="try.html" class="guide__item">
+                  <img src="./img/try.jpg" alt="15人" class="section__img" />
+                  <div class="guide__overlay">
+                    <span class="guide__text">トライエリア</span>
+                  </div>
+                </a>
+                <a href="touch.html" class="guide__item">
+                  <img src="./img/touch.jpg" alt="15人" class="section__img" />
+                  <div class="guide__overlay">
+                    <span class="guide__text">タッチライン</span>
+                  </div>
+                </a>
+              </div>
+              <p class="section__lead-text">
+                ラグビーでは、スクラムやモールなど様々なシチュエーションがあります。それらをキック・ラック・モール・スクラム・ラインアウト・反則・トライエリア・タッチラインの8つの項目に分類しました。それぞれのページで項目ごとに詳しく説明しています。気になる項目からご覧ください。
+              </p>
+            </div>
+          </div>
+
+          <div class="share">
+            <ul class="share__wrapper">
+              <li class="share__list">
+                <div class="share__contents">
+                  <a
+                    href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fzukai-rugby.com&text=図解ラグビー-世界一わかりやすいと言われたいラグビー解説サイト-"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src="./img/X.png" alt="" class="share__img no-modal" />
+                  </a>
+                </div>
+                <div class="share__text">シェア</div>
+              </li>
+              <li class="share__list">
+                <div class="share__contents">
+                  <a
+                    href="contact.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="./img/contact.png"
+                      alt=""
+                      class="share__img no-modal"
+                    />
+                  </a>
+                </div>
+                <div class="share__text">問い合わせ</div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <footer class="footer">
+          <div class="footer__title">
+            <a href="index.html" class="footer__title-link">図解ラグビー</a>
+          </div>
+          <div class="footer__contents">
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item">
+                <a href="kick.html" class="footer__nav-link button">
+                  <img
+                    src="./img/kick.jpg"
+                    alt="キック"
+                    class="footer__nav-img"
+                  />
+                  <span class="footer__button-text">キック</span>
+                </a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="ruck.html" class="footer__nav-link button">
+                  <img
+                    src="./img/ruck.jpg"
+                    alt="ラック"
+                    class="footer__nav-img"
+                  />
+                  <span class="footer__button-text">ラック</span>
+                </a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="maul.html" class="footer__nav-link button">
+                  <img
+                    src="./img/maul.jpg"
+                    alt="モール"
+                    class="footer__nav-img"
+                  />
+                  <span class="footer__button-text">モール</span>
+                </a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="scrum.html" class="footer__nav-link button">
+                  <img
+                    src="./img/scrum.jpg"
+                    alt="スクラム"
+                    class="footer__nav-img"
+                  />
+                  <span class="footer__button-text">スクラム</span>
+                </a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#" class="footer__nav-link button">
+                  <img
+                    src="./img/lineout.jpg"
+                    alt="ラインアウト"
+                    class="footer__nav-img"
+                  />
+                  <span class="footer__button-text">ラインアウト</span>
+                </a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="pena.html" class="footer__nav-link button">
+                  <img
+                    src="./img/pena.jpg"
+                    alt="反則"
+                    class="footer__nav-img"
+                  />
+                  <span class="footer__button-text">反則</span>
+                </a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="try.html" class="footer__nav-link button">
+                  <img
+                    src="./img/try.jpg"
+                    alt="トライエリア"
+                    class="footer__nav-img"
+                  />
+                  <span class="footer__button-text">トライエリア</span>
+                </a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="touch.html" class="footer__nav-link button">
+                  <img
+                    src="./img/touch.jpg"
+                    alt="タッチライン"
+                    class="footer__nav-img"
+                  />
+                  <span class="footer__button-text">タッチライン</span>
+                </a>
+              </li>
+              <li class="footer__nav-item">
+                <a
+                  href="https://x.com/zukai_rugby"
+                  class="footer__nav-link button button--border"
+                >
+                  <img
+                    src="./img/X.png"
+                    alt=""
+                    class="footer__nav-img footer__x-img"
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+      </main>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

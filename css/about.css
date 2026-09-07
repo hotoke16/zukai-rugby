@@ -1,0 +1,74 @@
+@charset "UTF-8";
+.about {
+  display: inline-block;
+  position: absolute;
+  right: 20px;
+  top: 120px;
+  text-decoration: none;
+  color: white;
+  background-color: rgb(59, 149, 109);
+  padding: 10px;
+  border-radius: 20px;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+}
+.about:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.guide {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.guide__item {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  text-decoration: none;
+  color: white;
+  border-radius: 10px;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+.guide__item:hover .overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px); /* 5px上に移動 */
+}
+.guide__img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.guide__overlay {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 70%;
+  background-color: rgba(200, 200, 200, 0.6);
+  padding: 1em;
+  border-radius: 8px;
+  text-align: center;
+  display: block;
+}
+.guide__text {
+  font-size: clam(1rem, 2vw, 1.5rem);
+  font-weight: bold;
+  color: #000;
+}
+
+@media screen and (min-width: 768px) {
+  .about {
+    top: 20px;
+  }
+}

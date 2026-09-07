@@ -1,0 +1,119 @@
+$primary-color: #007BFF;
+$hover-color: #0056b3;
+$background-color: #f9f9f9;
+$border-color: #ccc;
+$button-padding: 10px 20px;
+$input-padding: 10px;
+$font-size: 16px;
+$border-radius: 4px;
+$max-width: 600px;
+
+.contact-form {
+  background-color: $background-color;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: $max-width;
+  margin: 0 auto;
+
+  h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-family: 'Yusei Magic', sans-serif;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+    margin-right: 20px;
+  }
+
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    font-family: 'Yusei Magic', sans-serif;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: $input-padding;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    font-size: $font-size;
+    font-family: 'Poetsen One', sans-serif;
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 150px;
+  }
+
+  button {
+    background-color: rgba(59,149,109);
+    color: #fff;
+    padding: $button-padding;
+    border: none;
+    border-radius: 5px;
+    font-size: $font-size;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    font-family: 'Poetsen One', sans-serif;
+
+    &:hover {
+      background-color: rgb(40, 105, 76);
+    }
+
+    &.loading {
+      background-color: #ccc;
+      color: #666;
+      cursor: not-allowed;
+      position: relative;
+
+      &::after {
+        content: '送信中...';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  input:focus,
+  textarea:focus {
+    outline: none;
+    border-color: $primary-color;
+  }
+}
+
+#form-message {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 9999;
+  font-size: 16px;
+
+  &.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.form-success-message {
+  display: none;
+  text-align: center;
+  font-size: 18px;
+  color: #3b956d;
+  font-family: 'Yusei Magic', sans-serif;
+  margin-top: 30px;
+}
