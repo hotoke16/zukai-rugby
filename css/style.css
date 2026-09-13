@@ -262,6 +262,33 @@ body.is-fixed {
 .header__nav-item {
   list-style: none;
   margin-top: 14px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; /* 👈【追加】スマホ版は縦に並べる */
+}
+.header__nav-item.is-open .header__sub-nav {
+  max-height: 500px;
+  opacity: 1; /* フワッと表示 */
+  visibility: visible;
+  margin-top: 10px; /* 開いたときだけ親要素との間に少し隙間をあける */
+}
+.header__sub-nav {
+  list-style: none;
+  padding: 0 0 0 20px;
+  /* 👇 ここからアニメーションのための設定 */
+  margin-top: 0; /* 閉じた状態では余白をなくす */
+  max-height: 0; /* 高さを0にして隠す */
+  opacity: 0; /* 少し透明にしながら隠す */
+  visibility: hidden;
+  overflow: hidden; /* 枠からはみ出た部分を隠す（超重要） */
+  /* 0.4秒かけて、ぬるっと（ease-out）高さを変化させる */
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+.header__sub-item {
+  list-style: none; /* 念のためここでも黒丸を消す */
+  margin-bottom: 10px;
 }
 .header__nav-link {
   text-decoration: none;
@@ -269,11 +296,23 @@ body.is-fixed {
   display: -ms-flexbox;
   display: flex;
   width: 90%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; /* 👇 追加: 画像とテキストの縦位置を中央で揃える */
+  cursor: pointer;
 }
 .header__nav-img {
   width: 80px;
   height: 80px;
   border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover; /* 画像が歪まないようにする */
+}
+.header__sub-nav .header__nav-img {
+  width: 45px;
+  height: 45px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0; /* テキストが長くなっても画像が潰れないようにする */
 }
 .header__nav-text {
   color: white;
@@ -291,6 +330,12 @@ body.is-fixed {
   padding: 10px 0;
   letter-spacing: 0.5em;
   border-bottom: solid 1px;
+}
+.header__sub-nav .header__button-text {
+  font-size: 18px;
+  padding: 5px 0 5px 10px;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.3); /* 線を少し薄くする */
+  letter-spacing: 0.2em; /* 文字間隔を少し狭める */
 }
 .header__button-text:active {
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -686,6 +731,7 @@ body.is-fixed {
     width: 20%; /* 画面の20%幅 */
     height: 100vh; /* 画面全体の高さ */
     padding: 0px 0px;
+    z-index: 100;
   }
   .header__container {
     width: 100%;
@@ -710,6 +756,7 @@ body.is-fixed {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    overflow: visible !important; /* 👈【超重要】はみ出た要素を切り取らないように強制する */
   }
   .header__nav-list {
     -webkit-box-pack: justify;
@@ -725,9 +772,66 @@ body.is-fixed {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; /* 👈【追加】スマホの縦並びを解除 */
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    position: relative;
+  }
+  .header__nav-item:hover .header__sub-nav {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    pointer-events: auto; /* ホバー時のみクリック可能にする */
+  }
+  .header__sub-nav {
+    position: absolute;
+    top: 0;
+    left: 100%; /* 親メニューのすぐ右側に配置 */
+    width: 200px; /* 子メニューの幅。文字数に応じて調整してください */
+    background-color: rgb(59, 149, 109); /* 背景色（サイドバーと同じか少し変える） */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: none;
+    overflow: visible;
+    /* 最初は見えないようにする設定 */
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateX(-15px);
+            transform: translateX(-15px); /* 最初は少し左側にずらしておく */
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; /* 0.3秒かけてフワッと変化させる */
+    -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1); /* 影をつけて浮いている感を出す */
+    z-index: 999; /* 👈 【追加】他の要素の裏に隠れないようにする */
+    pointer-events: none; /* 👈 【追加】透明な時はマウス操作を無効にする（誤作動防止） */
+  }
+  .header__sub-item {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* メニュー間の薄い線 */
+  }
+  .header__sub-item:last-child {
+    border-bottom: none;
+  }
+  .header {
+    /* 親メニューにホバーした時に子メニューを表示する処理 */
+  }
+  .header__nav-item:hover .header__sub-nav {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translateX(0);
+            transform: translateX(0); /* ずらしていた位置を元に戻す */
   }
   .header__nav-link {
     display: -webkit-box;
@@ -738,6 +842,7 @@ body.is-fixed {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    cursor: pointer; /* divタグを使っても指マークになるように追加 */
   }
   .header__home {
     display: none;
@@ -765,7 +870,7 @@ body.is-fixed {
     padding: 0;
     white-space: nowrap;
     font-size: 16px;
-    letter-spacing: 0.5em;
+    letter-spacing: 0.2em;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
     border-bottom: none;
@@ -778,6 +883,7 @@ body.is-fixed {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    color: #fff; /* 文字色を明示的に白にしておく（既存デザインに合わせてください） */
   }
   .header__button-text:hover {
     background-color: rgb(201, 245, 225);
@@ -789,9 +895,6 @@ body.is-fixed {
     width: 80%; /* 残りの幅 */
   }
   .footer__nav-list {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .footer__x-img {
-    display: none;
+    grid-template-columns: repeat(5, 1fr);
   }
 }

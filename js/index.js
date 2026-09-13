@@ -101,3 +101,23 @@ $('#toc a').on('click', function(e) {
 });
 
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const navItems = document.querySelectorAll('.header__nav-item');
+
+  navItems.forEach(item => {
+    const parentLink = item.querySelector('.header__nav-link');
+    const subNav = item.querySelector('.header__sub-nav');
+
+    if (parentLink && subNav) {
+      parentLink.addEventListener('click', (e) => {
+        // 📱画面幅が768px以下の時（スマホ表示）のみ、クリックでのアコーディオン開閉を有効にする
+        // 💻PC表示の時はJSは何もしない（CSSのホバーに任せる）
+        if (window.innerWidth <= 768) {
+          e.preventDefault(); 
+          item.classList.toggle('is-open');
+        }
+      });
+    }
+  });
+});
