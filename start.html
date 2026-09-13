@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>図解ラグビー</title>
+    <meta name="description" content="ラグビー未経験の観戦者からラグビー経験者、現役レフリー向けの細かいルールまでわかりやすく図解で紹介します。"/>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&family=Yusei+Magic&display=swap" rel="stylesheet"/>
+
+    <link rel="icon" href="./img/favicon.png" type="image/jpeg">
+
+    <!-- スタイルシート -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5153873867460431" crossorigin="anonymous"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FBVVCHYGY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {dataLayer.push(arguments);}
+      gtag("js", new Date());
+
+      gtag("config", "G-7FBVVCHYGY");
+      </script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header class="header">
+      <div class="header__container">
+        <a  href="#" class="header__logo"><img src="./img/fv.jpg" alt="" class="header__logo-img"></a>
+        <button type="button" id="js-button-drawer" class="header__menu-button">Menu</button>
+
+        <div id="js-drawer" class="header__contents">
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-item">
+                <div class="header__nav-link button">
+                  <span class="header__button-text">ラグビーの基本</span>
+                </div>
+                <!-- 右にフワッとでる子メニュー -->
+                <ul class="header__sub-nav">
+                  <li class="header__sub-item">
+                    <a href="index.html" class="header__nav-link button">
+                      <img src="./img/basic.jpg" alt="基本" class="header__nav-img"/>
+                      <span class="header__button-text">基本</span>
+                    </a>
+                  </li>
+                  <li class="header__sub-item">
+                    <a href="referee.html" class="header__nav-link button">
+                      <img src="./img/referee.jpg" alt="レフリー" class="header__nav-img"/>
+                      <span class="header__button-text">レフリー</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="header__nav-item">
+                <div class="header__nav-link button">
+                  <span class="header__button-text">セットプレー</span>
+                </div>
+                <!-- 右にフワッとでる子メニュー -->
+                <ul class="header__sub-nav">
+                  <li class="header__sub-item">
+                    <a href="scrum.html" class="header__nav-link button">
+                      <img src="./img/scrum.jpg" alt="スクラム" class="header__nav-img"/>
+                      <span class="header__button-text">スクラム</span>
+                    </a>
+                  </li>
+                  <li class="header__sub-item">
+                    <a href="lineout.html" class="header__nav-link button">
+                      <img src="./img/lineout.jpg" alt="ラインアウト" class="header__nav-img"/>
+                      <span class="header__button-text">ラインアウト</span>
+                    </a>
+                  </li>
+                  <li class="header__sub-item">
+                    <a href="start.html" class="header__nav-link button">
+                      <img src="./img/start.jpg" alt="キックオフ" class="header__nav-img"/>
+                      <span class="header__button-text">キックオフ<br />ドロップアウト</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="header__nav-item">
+                <div class="header__nav-link button">
+                  <span class="header__button-text">反則・ペナルティ</span>
+                </div>
+                <!-- 右にフワッとでる子メニュー -->
+                <ul class="header__sub-nav">
+                  <li class="header__sub-item">
+                    <a href="advantage.html" class="header__nav-link button">
+                      <img src="./img/advantage.jpg" alt="アドバンテージ" class="header__nav-img"/>
+                      <span class="header__button-text">アドバンテージ</span>
+                    </a>
+                  </li>
+                  <li class="header__sub-item">
+                    <a href="pkfk.html" class="header__nav-link button">
+                      <img src="./img/pkfk.jpg" alt="ペナルティキック" class="header__nav-img"/>
+                      <span class="header__button-text">ペナルティ<br />フリーキック</span>
+                    </a>
+                  </li>
+                  <li class="header__sub-item">
+                    <a href="pena.html" class="header__nav-link button">
+                      <img src="./img/pena.jpg" alt="スクラム" class="header__nav-img"/>
+                      <span class="header__button-text">反則</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="header__nav-item">
+                <div class="header__nav-link button">
+                  <span class="header__button-text">密集戦</span>
+                </div>
+                <!-- 右にフワッとでる子メニュー -->
+                <ul class="header__sub-nav">
+                  <li class="header__sub-item">
+                    <a href="ruck.html" class="header__nav-link button">
+                      <img src="./img/ruck.jpg" alt="ラック" class="header__nav-img"/>
+                      <span class="header__button-text">ラック</span>
+                    </a>
+                  </li>
+                  <li class="header__sub-item">
+                    <a href="maul.html" class="header__nav-link button">
+                      <img src="./img/maul.jpg" alt="モール" class="header__nav-img"/>
+                      <span class="header__button-text">モール</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="header__nav-item">
+                <div class="header__nav-link button">
+                  <span class="header__button-text">キック</span>
+                </div>
+                <!-- 右にフワッとでる子メニュー -->
+                <ul class="header__sub-nav">
+                  <li class="header__sub-item">
+                    <a href="kick.html" class="header__nav-link button">
+                      <img src="./img/kick.jpg" alt="キック" class="header__nav-img"/>
+                      <span class="header__button-text">インプレーキック</span>
+                    </a>
+                  </li>
+                  <li class="header__sub-item">
+                    <a href="score.html" class="header__nav-link button">
+                      <img src="./img/score.jpg" alt="スコア" class="header__nav-img"/>
+                      <span class="header__button-text">スコアリングキック</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="header__nav-item">
+                <div class="header__nav-link button">
+                  <span class="header__button-text">グラウンドエリア</span>
+                </div>
+                <!-- 右にフワッとでる子メニュー -->
+                <ul class="header__sub-nav">
+                  <li class="header__sub-item">
+                    <a href="try.html" class="header__nav-link button">
+                      <img src="./img/try.jpg" alt="スクラム" class="header__nav-img"/>
+                      <span class="header__button-text">トライエリア</span>
+                    </a>
+                  </li>
+                  <li class="header__sub-item">
+                    <a href="touch.html" class="header__nav-link button">
+                      <img src="./img/touch.jpg" alt="スクラム" class="header__nav-img"/>
+                      <span class="header__button-text">タッチライン</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="header__nav-item">
+                <a href="https://x.com/zukai_rugby" class="header__nav-link button button--border">
+                  <img src="./img/X.png" alt="" class="header__nav-img header__x-img">
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+      <main class="main">
+        <h1 class="main__title">キックについて</h1>
+        <section id="explanation" class="section explanation">
+          <div class="section__inner">
+            <h2 class="section__head">
+              <span class="section__head-main">キックによるボールの出し方とその後①</span>
+            </h2>
+            <div class="section__content">
+              <div class="quadruple">
+                <img src="./img/10.キックの出し方 (1).JPG" alt="" class="section__img"/>
+                <img src="./img/10.キックの出し方 (2).JPG" alt="" class="section__img"/>
+                <img src="./img/10.キックの出し方 (3).JPG" alt="" class="section__img"/>
+                <img src="./img/10.キックの出し方 (4).JPG" alt="" class="section__img"/>
+              </div>
+              <p class="section__lead-text">
+                キックをした場所が自陣22mライン内側・22mライン外側とでキックの出し方、出した後のラインアウト場所が変わる。ペナルティキックの場合はどのエリアでもノーバウンドで自由にタッチに出せる。
+              </p>
+            </div>
+          </div> 
+          <div class="section__inner">
+            <h2 class="section__head">
+              <span class="section__head-main"
+                >キックによるボールの出し方とその後②</span
+              >
+            </h2>
+            <div class="section__content">
+              <div class="double">
+                <img src="./img/11.キックの出し方 (1).JPG" alt="" class="section__img"/>
+                <img src="./img/11.キックの出し方 (2).JPG" alt="" class="section__img"/>
+              </div>
+              <p class="section__lead-text">自陣から敵陣22mライン内側にワンバウンドで蹴り出すと、マイボールのラインアウトで再開される。また、キックされたボールがタッチライン方向に飛ばず、デッドボールラインを超えた場合、ミスキックとなる。</p>
+            </div>
+          </div>
+          <div class="section__inner">
+            <h2 class="section__head">
+              <span class="section__head-main"
+                >キックによるボールの出し方とその後③</span
+              >
+            </h2>
+            <div class="section__content">
+              <div class="triple">
+                <img src="./img/32.キックの出し方③ (1).jpg" alt="" class="section__img"/>
+                <img src="./img/32.キックの出し方③ (2).jpg" alt="" class="section__img"/>
+                <img src="./img/32.キックの出し方③ (3).jpg" alt="" class="section__img"/>
+              </div>
+              <p class="section__lead-text">
+                蹴ったボールが敵陣のインゴールに入り、タッチイントライラインあるいはデッドボールラインを超えると、相手ボールの22mドロップアウトか蹴った地点での相手ボールでのスクラムで再開される。
+              </p>
+            </div>
+          </div>
+          <div class="section__inner">
+            <h2 class="section__head">
+              <span class="section__head-main"
+                >自陣22mライン内側からのタッチキック</span>
+            </h2>
+            <div class="section__content">
+              <div class="double">
+                <img src="./img/15.タッチキック 22mイン (1).JPG" alt="" class="section__img"/>
+                <img src="./img/15.タッチキック 22mイン (2).JPG" alt="" class="section__img"/>
+              </div>
+              <p class="section__lead-text">
+                自陣22mライン内側からボールを外に蹴り出すと出た地点から相手ボールラインアウトでスタートする。ボールの出方はノーバウンドで問題ない。
+              </p>
+            </div>
+          </div>
+          <div class="section__inner">
+            <h2 class="section__head">
+              <span class="section__head-main">自陣22mライン外側からのタッチキック</span>
+            </h2>
+            <div class="section__content">
+              <div class="quadruple">
+                <img src="./img/17.タッチキック 22mアウト  (1).JPG" alt="" class="section__img"/>
+                <img src="./img/17.タッチキック 22mアウト  (2).JPG" alt="" class="section__img"/>
+                <img src="./img/17.タッチキック 22mアウト  (3).JPG" alt="" class="section__img"/>
+                <img src="./img/17.タッチキック 22mアウト  (4).JPG" alt="" class="section__img"/>
+              </div>
+              <p class="section__lead-text">
+                自陣22mライン外側からボールを外に蹴り出す場合、ワンバウンド以上で出たら、出た地点から相手ボールラインアウトでスタートする。ノーバウンドで出たら蹴った地点から相手ボールラインアウトでスタートする。
+              </p>
+            </div>
+          </div>
+          <ul class="section__nav-list">
+            <li class="section__nav-item">
+              <a href="https://x.com/zukai_rugby/status/1815584369324572718" target="_blank" rel="noopener noreferrer">
+                <img src="./img/X.png" alt="" class="section__x-img no-modal" />
+              </a>
+            </li>
+          </ul>
+          <div class="section__inner">
+            <h2 class="section__head">
+              <span class="section__head-main">50 22(フィフティートゥエンティトゥー)</span>
+            </h2>
+            <div class="section__content">
+              <div class="double">
+                <img src="./img/16.タッチキック 50 22 (1).JPG" alt="" class="section__img"/>
+                <img src="./img/16.タッチキック 50 22 (2).JPG" alt="" class="section__img"/>
+              </div>
+              <p class="section__lead-text">
+                自陣（ハーフウェイライン内側）からボールを敵陣22mライン内側にワンバウンド以上で蹴り出すと出た地点からマイボールラインアウトでスタートする。
+              </p>
+            </div>
+          </div>
+          <div class="section__inner">
+            <h2 class="section__head">
+              <span class="section__head-main">ペナルティオプション</span>
+            </h2>
+            <div class="section__content">
+              <div class="quadruple">
+                <img src="./img/9.ペナルティキックオプション (1).JPG" alt="" class="section__img"/>
+                <img src="./img/9.ペナルティキックオプション (2).JPG" alt="" class="section__img"/>
+                <img src="./img/9.ペナルティキックオプション (3).JPG" alt="" class="section__img"/>
+                <img src="./img/9.ペナルティキックオプション (4).JPG" alt="" class="section__img"/>
+              </div>
+              <p class="section__lead-text">
+                軽い反則の場合はスクラムで再開するが、重い反則はペナルティキックで再開する。ペナルティキックの再開方法は複数あり、タッチキック、スクラム、ペナルティゴール、クイックスタートから選択できる。
+              </p>
+            </div>
+          </div>
+          <div class="section__inner">
+            <h2 class="section__head">
+              <span class="section__head-main">フェアキャッチ</span>
+            </h2>
+            <div class="section__content">
+              <div class="quadruple">
+                <img src="./img/21.フェアキャッチ (1).jpg" alt="" class="section__img"/>
+                <img src="./img/21.フェアキャッチ (2).jpg" alt="" class="section__img"/>
+                <img src="./img/21.フェアキャッチ (3).jpg" alt="" class="section__img"/>
+                <img
+                  src="./img/21.フェアキャッチ (4).jpg"
+                  alt=""
+                  class="section__img"
+                />
+              </div>
+              <p class="section__lead-text">
+                相手から蹴られたボールの落下地点が22mライン内側で、キャッチ時に「マーク」と言えばプレーを止めることができる。
+                フリーキック（選択肢はキック・クイックスタート・スクラム）が与えられ、落ち着いて試合再開ができる。
+              </p>
+            </div>
+          </div>
+          <ul class="section__nav-list">
+            <li class="section__nav-item">
+              <a
+                href="https://x.com/zukai_rugby/status/1826815121643241786"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="./img/X.png" alt="" class="section__x-img no-modal" />
+              </a>
+            </li>
+          </ul>
+          <div class="section__inner">
+            <h2 class="section__head">
+              <span class="section__head-main">キックオフサイド</span>
+            </h2>
+            <div class="section__content">
+              <div class="triple">
+                <img
+                  src="./img/24.キックオフサイド (1).jpg"
+                  alt=""
+                  class="section__img"
+                />
+                <img
+                  src="./img/24.キックオフサイド (2).jpg"
+                  alt=""
+                  class="section__img"
+                />
+                <img
+                  src="./img/24.キックオフサイド (3).jpg"
+                  alt=""
+                  class="section__img"
+                />
+              </div>
+              <p class="section__lead-text">
+                キックをした選手より前にいる選手はボールを取ったり、タックルをするなどボールに対してプレーしてはならず、後ろに下がる意志を示さなければならない。キックをした選手かその後ろにいる選手に追い抜かされて初めてプレーできる。
+              </p>
+            </div>
+          </div>
+          <div class="section__inner">
+            <h2 class="section__head">
+              <span class="section__head-main">ペナルティゴール</span>
+            </h2>
+            <div class="section__content">
+              <div class="quadruple">
+                <img src="./img/51.ペナルティゴール  (1).jpg" alt="" class="section__img"/>
+                <img src="./img/51.ペナルティゴール  (2).jpg" alt="" class="section__img"/>
+                <img src="./img/51.ペナルティゴール  (3).jpg" alt="" class="section__img"/>
+                <img src="./img/51.ペナルティゴール  (4).jpg" alt="" class="section__img"/>
+              </div>
+              <p class="section__lead-text">
+                ペナルティをもらったら、起きた場所からペナルティゴール（ボールを蹴ってＨポールに入れる）の3点を狙うことができる。キッカーの能力次第で得点を取りにいける範囲が広がる。
+              </p>
+            </div>
+          </div>
+          <div class="section__inner">
+            <h2 class="section__head">
+              <span class="section__head-main">ドロップゴール</span>
+            </h2>
+            <div class="section__content">
+              <div class="triple">
+                <img src="./img/53.ドロップゴール (1).jpg" alt="" class="section__img"/>
+                <img src="./img/53.ドロップゴール (2).jpg" alt="" class="section__img"/>
+                <img src="./img/53.ドロップゴール (3).jpg" alt="" class="section__img"/>
+              </div>
+              <p class="section__lead-text">
+                ドロップゴール（ボールを落としてから蹴ってＨポールに入れる）は、グラウンドのどこからでも蹴ることができる。キッカーの能力次第で得点を取りにいける範囲が広がる。
+              </p>
+            </div>
+          </div>
+          <div class="section__inner">
+            <h2 class="section__head">
+              <span class="section__head-main">フリーキック</span>
+            </h2>
+            <div class="section__content">
+              <div class="triple">
+                <img src="./img/80.フリーキック (1).jpg" alt="" class="section__img"/>
+                <img src="./img/80.フリーキック (2).jpg" alt="" class="section__img"/>
+                <img src="./img/80.フリーキック (3).jpg" alt="" class="section__img"/>
+              </div>
+              <p class="section__lead-text">
+                軽い反則をした場合、フリーキックが与えられる。フリーキックの選択肢は、キック・スクラム・クイックスタートなどがある。<br />軽い反則とは、スクラム時のアーリープッシュやラインアウトのノット5mなどがある。
+              </p>
+            </div>
+          </div>
+          <div class="section__inner">
+            <h2 class="section__head">
+              <span class="section__head-main">キックオフ</span>
+            </h2>
+            <div class="section__content">
+              <div class="triple">
+                <img src="./img/18.キックオフ (1).jpg" class="section__img"/>
+                <img src="./img/18.キックオフ (2).jpg" class="section__img"/>
+                <img src="./img/18.キックオフ (3).jpg" class="section__img"/>
+              </div>
+              <p class="section__lead-text">
+                試合（トライ後）はキックオフでスタートする。ハーフウェイライン上か後方から10mラインを超えるようにキックしなければならないが、10mラインギリギリに落とせば、ボールを確保しやすい。ボールを一度地面に落として蹴るドロップキックで行われる。
+              </p>
+            </div>
+          </div>
+          <div class="section__inner">
+            <h2 class="section__head">
+              <span class="section__head-main">キックオフミス①</span>
+            </h2>
+            <div class="section__content">
+              <div class="triple">
+                <img src="./img/71.キックオフミス① (1).jpg" alt="" class="section__img"/>
+                <img src="./img/71.キックオフミス① (2).jpg" alt="" class="section__img"/>
+                <img src="./img/71.キックオフミス① (3).jpg" alt="" class="section__img"/>
+              </div>
+              <p class="section__lead-text">
+                キックオフで蹴られたボールがインゴールエリアに入り、相手がボールを押さえた、あるいはボールが外に出た場合、相手チームはキックオフのやり直しか中央でのスクラムを選択することができる。
+              </p>
+            </div>
+          </div>
+          <div class="section__inner">
+            <h2 class="section__head">
+              <span class="section__head-main">キックオフミス</span>
+            </h2>
+            <div class="section__content">
+              <div class="quadruple">
+                <img src="./img/72.キックオフミス② (1).jpg" alt="" class="section__img"/>
+                <img src="./img/72.キックオフミス② (2).jpg" alt="" class="section__img"/>
+                <img src="./img/72.キックオフミス② (3).jpg" alt="" class="section__img"/>
+                <img src="./img/72.キックオフミス② (4).jpg" alt="" class="section__img"/>
+              </div>
+              <p class="section__lead-text">
+                キックオフで蹴られたボールがバウンドせずに直接タッチラインの外に出た場合、相手チームはキックオフのやり直し、中央でのスクラム、中央でのラインアウトを選択することができる。
+              </p>
+            </div>
+          </div>
+          <div class="section__inner">
+            <h2 class="section__head">
+              <span class="section__head-main">キックオフミス③</span>
+            </h2>
+            <div class="section__content">
+              <div class="quadruple">
+                <img src="./img/73.キックオフミス③ (1).jpg" alt="" class="section__img"/>
+                <img src="./img/73.キックオフミス③ (2).jpg" alt="" class="section__img"/>
+                <img src="./img/73.キックオフミス③ (3).jpg" alt="" class="section__img"/>
+                <img src="./img/73.キックオフミス③ (4).jpg" alt="" class="section__img"/>
+              </div>
+              <p class="section__lead-text">
+                キックオフで蹴られたボールが10mラインを超えなかった場合、相手チームはキックオフのやり直し、中央でのスクラム、ボールを確保してプレーを継続することを選択することができる。
+              </p>
+            </div>
+          </div>
+          <div class="section__inner">
+            <h2 class="section__head">
+              <span class="section__head-main">キックオフミス④</span>
+            </h2>
+            <div class="section__content">
+              <div class="triple">
+                <img src="./img/74.キックオフミス④ (1).jpg" alt="" class="section__img"/>
+                <img src="./img/74.キックオフミス④ (2).jpg" alt="" class="section__img"/>
+                <img src="./img/74.キックオフミス④ (3).jpg" alt="" class="section__img"/>
+              </div>
+              <p class="section__lead-text">キックオフはドロップキック（ボールを一度地面に落として蹴る）で行う。ドロップキックで行わなかった場合、相手チームはキックオフのやり直し、中央でのスクラム、選択することができる。</p>
+            </div>
+          </div>
+          <div class="share">
+            <ul class="share__wrapper">
+              <li class="share__list">
+                <div class="share__contents">
+                  <a
+                    href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fzukai-rugby.com&text=図解ラグビー-世界一わかりやすいと言われたいラグビー解説サイト-"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src="./img/X.png" alt="" class="share__img no-modal" />
+                  </a>
+                </div>
+                <div class="share__text">シェア</div>
+              </li>
+              <li class="share__list">
+                <div class="share__contents">
+                  <a
+                    href="contact.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="./img/contact.png"
+                      alt=""
+                      class="share__img no-modal"
+                    />
+                  </a>
+                </div>
+                <div class="share__text">問い合わせ</div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <img src="" alt="拡大画像" />
+              <button class="nav-button prev">&#10094;</button>
+              <button class="nav-button next">&#10095;</button>
+              <p class="modal__lead-text"></p>
+            </div>
+          </div>
+        </section>
+
+        <footer class="footer">
+        <div class="footer__title">
+          <a href="index.html" class="footer__title-link">図解ラグビー</a>
+        </div>
+        <div class="footer__contents">
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item">
+              <a href="index.html" class="footer__nav-link button">
+                <img src="./img/basic.jpg" alt="基本" class="footer__nav-img">
+                <span class="footer__button-text">基本</span>
+              </a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="referee.html" class="footer__nav-link button">
+                <img src="./img/referee.jpg" alt="レフリー" class="footer__nav-img">
+                <span class="footer__button-text">レフリー</span>
+              </a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="scrum.html" class="footer__nav-link button">
+                <img src="./img/scrum.jpg" alt="スクラム" class="footer__nav-img">
+                <span class="footer__button-text">スクラム</span>
+              </a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#" class="footer__nav-link button">
+                <img src="./img/lineout.jpg" alt="ラインアウト" class="footer__nav-img">
+                <span class="footer__button-text">ラインアウト</span>
+              </a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="touch.html" class="footer__nav-link button">
+                <img src="./img/start.jpg" alt="キックオフ" class="footer__nav-img">
+                <span class="footer__button-text">キックオフ</span>
+              </a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="advantage.html" class="footer__nav-link button">
+                <img src="./img/advantage.jpg" alt="アドバンテージ" class="footer__nav-img">
+                <span class="footer__button-text">ｱﾄﾞﾊﾞﾝﾃｰｼﾞ</span>
+              </a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="pkfk.html" class="footer__nav-link button">
+                <img src="./img/pkfk.jpg" alt="ペナルティキック" class="footer__nav-img">
+                <span class="footer__button-text">PK/FK</span>
+              </a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="pena.html" class="footer__nav-link button">
+                <img src="./img/pena.jpg" alt="反則" class="footer__nav-img">
+                <span class="footer__button-text">反則</span>
+              </a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="ruck.html" class="footer__nav-link button">
+                <img src="./img/ruck.jpg" alt="ラック" class="footer__nav-img">
+                <span class="footer__button-text">ラック</span>
+              </a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="maul.html" class="footer__nav-link button">
+                <img src="./img/maul.jpg" alt="モール" class="footer__nav-img">
+                <span class="footer__button-text">モール</span>
+              </a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="kick.html" class="footer__nav-link button">
+                <img src="./img/kick.jpg" alt="インプレーキック" class="footer__nav-img">
+                <span class="footer__button-text">ｲﾝﾌﾟﾚｰｷｯｸ</span>
+              </a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="score.html" class="footer__nav-link button">
+                <img src="./img/score.jpg" alt="スコアリングキック" class="footer__nav-img">
+                <span class="footer__button-text">ｽｺｱﾘﾝｸﾞｷｯｸ</span>
+              </a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="try.html" class="footer__nav-link button">
+                <img src="./img/try.jpg" alt="トライエリア" class="footer__nav-img">
+                <span class="footer__button-text">トライエリア</span>
+              </a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="touch.html" class="footer__nav-link button">
+                <img src="./img/touch.jpg" alt="タッチライン" class="footer__nav-img">
+                <span class="footer__button-text">タッチライン</span>
+              </a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="https://x.com/zukai_rugby" class="footer__nav-link button button--border">
+                <img src="./img/X.png" alt="" class="footer__nav-img footer__x-img">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+      </main>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
