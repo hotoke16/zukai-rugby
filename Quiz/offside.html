@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>【無料版 オフサイド編】ラグビールール クイズ</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="/favicon.png" type="image/jpeg">
+</head>
+<body>
+
+<header class="global-header green-header" onclick="location.reload()">
+  🏉 ラグビールール クイズ
+  <span class="header-sub">(タップでトップへ戻る)</span>
+</header>
+
+<div class="container">
+  <div id="nav-screen" class="card">
+    <div class="nav-row">
+      <button class="menu-btn mode-btn fav-mode-btn" data-mode="favorite">★ お気に入りクイズ</button>
+    </div>
+    
+    <div class="nav-row">
+      <button class="menu-btn mode-btn green free-highlight" data-mode="beginner">初級</button>
+    </div>
+    
+    <div class="nav-row">
+      <button class="menu-btn" id="toggle-intermediate">中級 ▽</button>
+      <div id="intermediate-wrapper">
+        <div class="nav-grid-buttons">
+          <button class="menu-btn mode-btn" data-mode="intermediate" data-tag="キック">中級: キック</button>
+          <button class="menu-btn mode-btn" data-mode="intermediate" data-tag="ラック">中級: ラック</button>
+          <button class="menu-btn mode-btn" data-mode="intermediate" data-tag="スクラム">中級: スクラム</button>
+          <button class="menu-btn mode-btn" data-mode="intermediate" data-tag="ラインアウト">中級: ラインアウト</button>
+          <button class="menu-btn mode-btn free-highlight" data-mode="intermediate" data-tag="オフサイド">中級: オフサイド</button>
+          <button class="menu-btn mode-btn" data-mode="intermediate" data-tag="タッチライン">中級: タッチライン</button>
+          <button class="menu-btn mode-btn" data-mode="intermediate" data-tag="トライエリア">中級: トライエリア</button>
+          <button class="menu-btn mode-btn" data-mode="intermediate" data-tag="タックル">中級: タックル</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="nav-row">
+      <button class="menu-btn mode-btn green" data-mode="advanced">上級</button>
+    </div>
+
+    <div class="nav-row">
+      <button class="menu-btn" id="toggle-custom-btn">カスタムクイズ</button>
+    </div>
+
+    <div id="custom-settings">
+      <div class="setting-group">
+        <label>出題数:</label>
+        <select id="custom-count" class="custom-select">
+          <option value="5">5問</option>
+          <option value="10" selected>10問</option>
+          <option value="20">20問</option>
+          <option value="30">30問</option>
+        </select>
+      </div>
+      <div class="setting-group">
+        <label>対象カテゴリー（複数選択可）:</label>
+        <div class="tag-checkboxes">
+          <label class="tag-label" style="background:#fff9c4; border-color:#fbc02d;"><input type="checkbox" value="お気に入り">★お気に入り</label>
+          <label class="tag-label"><input type="checkbox" value="キック" checked>キック</label>
+          <label class="tag-label"><input type="checkbox" value="ラック" checked>ラック</label>
+          <label class="tag-label"><input type="checkbox" value="スクラム" checked>スクラム</label>
+          <label class="tag-label"><input type="checkbox" value="ラインアウト" checked>ラインアウト</label>
+          <label class="tag-label"><input type="checkbox" value="オフサイド" checked>オフサイド</label>
+          <label class="tag-label"><input type="checkbox" value="タッチライン" checked>タッチライン</label>
+          <label class="tag-label"><input type="checkbox" value="トライエリア" checked>トライエリア</label>
+          <label class="tag-label"><input type="checkbox" value="タックル" checked>タックル</label>
+        </div>
+      </div>
+      <button class="start-custom-btn" id="start-custom-btn">出題開始</button>
+    </div>
+
+    <div id="premium-alert" class="premium-alert" style="display:none; margin-top:20px; padding:16px; background-color:#fff3cd; border-left:6px solid #ffc107; border-radius:8px; font-weight:bold; color:#856404; text-align:center; box-shadow:0 4px 6px rgba(0,0,0,0.05);">
+      🔒 完全版の利用は「図解ラグビーラボ」から！<br>
+      <a href="https://note.com/zukai_rugby/n/nb46f9184c720" style="display:block; margin-top:12px; padding:10px; background:#1565c0; color:#fff; border-radius:6px; text-decoration:none; font-size:1rem;">詳細を見る
+</a>
+    </div>
+
+  </div>
+
+  <div id="quiz-screen" class="card">
+    <div class="q-header">
+      第 <span id="q-num">1</span> 問 <span id="q-category-label" class="q-cat"></span>
+      <span id="fav-btn" class="fav-icon">☆</span>
+    </div>
+    <div class="q-text" id="q-text"></div>
+    <div class="choices-container" id="choices-area"></div>
+    <button id="submit-btn" class="action-btn" disabled>回答する</button>
+
+    <div id="feedback-area" style="display: none;">
+      <div class="judge-text" id="judge-text"></div>
+      <div class="exp-text" id="exp-text"></div>
+      
+      <!-- ★ここから新規追加：学習メモエリア -->
+      <div class="memo-area">
+        <label for="q-memo" style="font-weight:bold; color:#555;">📝 自分の学習メモ</label>
+        <textarea id="q-memo" placeholder="この問題の覚え方や反省点をメモしよう..."></textarea>
+        <button id="save-memo-btn" class="menu-btn" style="padding: 6px 12px; margin-top: 5px; font-size: 0.9rem;">メモを保存</button>
+        <span id="memo-saved-msg" style="color: #4caf50; font-size: 0.8rem; display: none; margin-left: 10px;">保存しました！</span>
+      </div>
+      <!-- ★ここまで追加 -->
+
+      <button id="next-btn" class="action-btn">次の問題へ</button>
+    </div>
+  </div>
+
+  <div id="result-screen" class="card">
+    <div class="score-text" id="result-score"></div>
+    <div class="message-text" id="result-msg"></div>
+    <button class="menu-btn green" onclick="location.reload()">トップに戻る</button>
+  </div>
+</div>
+
+<script src="beginner.js"></script>
+<script src="intermediate.js"></script>
+<script src="advanced.js"></script>
+
+<script src="offside.js"></script>
+
+<script>
+  $(document).ready(function() {
+    $('#toggle-intermediate').on('click', function() {
+      const $btn = $(this);
+      $('#intermediate-wrapper').slideToggle(200, function() {
+        if ($('#intermediate-wrapper').is(':visible')) {
+          $btn.text('中級 ×').css({'background-color': '#e3f2fd', 'border-color': '#1565c0'});
+        } else {
+          $btn.text('中級 ▽').css({'background-color': '#ffffff', 'border-color': '#e0e0e0'});
+        }
+      });
+    });
+    $(window).on('resize', function() {
+      if ($(window).width() > 500) {
+        $('#intermediate-wrapper').show();
+      } else if ($('#toggle-intermediate').text().includes('▽')) {
+        $('#intermediate-wrapper').hide();
+      }
+    });
+  });
+</script>
+</body>
+</html>

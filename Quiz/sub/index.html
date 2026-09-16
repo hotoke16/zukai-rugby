@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>スポーツルール クイズアプリ</title>
+  
+  <link rel="stylesheet" href="style.css">
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+  <div class="container">
+    <div class="difficulty-selector">
+      <button class="diff-btn active" data-level="beginner">初級</button>
+      <button class="diff-btn" data-level="intermediate">中級</button>
+      <button class="diff-btn" data-level="advanced">上級</button>
+    </div>
+
+    <div id="quiz-area" class="quiz-card">
+      <div class="question-header">第 <span id="q-number">1</span> 問</div>
+      <div class="question-text" id="q-text">ここに問題文が表示されます。</div>
+      <img id="q-image" class="question-image" src="" alt="問題画像">
+      
+      <div class="choices-wrapper" id="choices"></div>
+
+      <button class="submit-btn" id="submit-btn" disabled>回答する</button>
+
+      <div class="feedback-area" id="feedback">
+        <div class="judgement" id="judgement-text"></div>
+        <div class="explanation" id="explanation-text"></div>
+        <button class="next-btn" id="next-btn">次の問題へ</button>
+      </div>
+    </div>
+
+    <div id="result-area" class="result-area">
+      <div class="score-text" id="score-display"></div>
+      <div class="message-text" id="message-display"></div>
+      <button class="retry-btn" id="retry-btn">もう一度チャレンジ</button>
+    </div>
+  </div>
+
+  <script src="data-beginner.js"></script>
+  <script src="data-intermediate.js"></script>
+  <script src="data-advanced.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

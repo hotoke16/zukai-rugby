@@ -1,0 +1,214 @@
+/* =========================================
+   1. ベース・変数設定
+========================================= */
+:root {
+  --primary-green: #2e7d32;
+  --primary-navy: #1565c0;
+  --bg-color: #f4f6f9;
+  --card-bg: #ffffff;
+  --text-main: #333333;
+  --border-light: #e0e0e0;
+  --correct: #d32f2f;
+  --incorrect: #1976d2;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  margin: 0;
+  padding: 80px 20px 20px; /* 固定ヘッダー分の余白 */
+  line-height: 1.6;
+}
+
+/* =========================================
+   2. グローバルヘッダー
+========================================= */
+.global-header {
+  position: fixed; top: 0; left: 0; width: 100%;
+  background-color: var(--primary-navy); color: #ffffff;
+  text-align: center; padding: 16px 0; font-size: 1.2rem; font-weight: bold;
+  z-index: 1000; cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.green-header {
+  background-color: var(--primary-green); color: #ffffff;
+}
+
+.header-sub {
+  font-size: 0.8rem; font-weight: normal;
+  /* inline-blockにする事で、文字が1文字ずつバラバラに改行されるのを防ぎます */
+  display: inline-block;
+  margin-left: 5px;
+}
+
+/* =========================================
+   3. メニュー・ボタン共通設定
+========================================= */
+.container { max-width: 700px; margin: 0 auto; }
+.card {
+  background-color: var(--card-bg); border-radius: 12px;
+  padding: 25px; box-shadow: 0 4px 12px rgba(10, 45, 199, 0.05); margin-bottom: 20px;
+}
+.nav-row { margin-bottom: 15px; }
+
+.menu-btn {
+  width: 100%; padding: 14px 8px; font-size: 0.95rem; font-weight: bold;
+  border-radius: 8px; border: 2px solid var(--primary-navy);
+  background-color: #ffffff; color: var(--text-main);
+  cursor: pointer; transition: all 0.2s; text-align: center;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.menu-btn:hover { background-color: #cde2ff; transform: translateY(-2px); }
+
+/* 初級・上級用の緑ボタン */
+.menu-btn.green {
+  border-color: var(--primary-green); color: var(--primary-green);
+  padding: 16px 10px; font-size: 1rem;
+}
+.menu-btn.green:hover { background-color: #e8f5e9; }
+
+/* =========================================
+   4. 中級メニュー（グリッド＆アコーディオン）
+========================================= */
+#toggle-intermediate {
+  display: none; /* 初期状態（PC等）では非表示 */
+  border-color: var(--primary-navy);
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.nav-grid-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* PC時は4列 */
+  gap: 10px;
+}
+
+/* --- レスポンシブ（画面幅による列変更） --- */
+@media (max-width: 650px) {
+  /* 3列になる所を2列に変更 */
+  .nav-grid-buttons { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 500px) {
+  /* スマホ等で1列にする */
+  .nav-grid-buttons { grid-template-columns: 1fr; gap: 8px; }
+  
+  /* アコーディオン用のトグルボタンを表示 */
+  #toggle-intermediate { display: block; }
+  
+  /* 中身は初期状態では隠す */
+  #intermediate-wrapper { display: none; }
+  
+  body { padding-top: 90px; } /* スマホ時、ヘッダー改行分少し余白を広げる */
+}
+
+/* =========================================
+   5. カスタム設定エリア
+========================================= */
+#custom-settings { display: none; background-color: #fafafa; border: 1px solid var(--border-light); border-radius: 8px; padding: 15px; margin-top: 10px; }
+.setting-group { margin-bottom: 15px; }
+.setting-group label { font-weight: bold; display: block; margin-bottom: 8px; }
+.custom-select { padding: 8px; width: 100px; border-radius: 4px; border: 1px solid #ccc; }
+.tag-checkboxes { display: flex; flex-wrap: wrap; gap: 10px; }
+.tag-label { background: #fff; border: 1px solid #ccc; padding: 6px 12px; border-radius: 20px; cursor: pointer; font-size: 0.9rem; }
+.start-custom-btn { width: 100%; padding: 12px; background: var(--primary-navy); color: #fff; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; margin-top: 10px; }
+
+/* =========================================
+   6. クイズ画面・結果画面
+========================================= */
+#quiz-screen { display: none; }
+.q-header { font-size: 1.1rem; font-weight: bold; margin-bottom: 15px; border-bottom: 2px solid var(--border-light); padding-bottom: 10px; color: var(--primary-navy); }
+.q-cat { float: right; font-size: 0.9rem; color: #666; }
+.q-text { font-size: 1.15rem; margin-bottom: 25px; font-weight: bold; }
+.choices-container { display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px; }
+.choice-btn { padding: 18px; background-color: #fff; border: 2px solid var(--border-light); border-radius: 10px; font-size: 1.05rem; text-align: left; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 2px 5px rgba(0,0,0,0.02); }
+.choice-btn:not(:disabled):hover { border-color: var(--primary-green); transform: translateY(-2px); }
+.choice-btn.selected { border-color: var(--primary-green); background-color: #e8f5e9; font-weight: bold; }
+.choice-btn:disabled { cursor: not-allowed; opacity: 0.8; }
+
+.action-btn { width: 100%; padding: 16px; border: none; border-radius: 10px; font-size: 1.2rem; font-weight: bold; cursor: pointer; transition: 0.3s; }
+#submit-btn { background-color: var(--primary-green); color: #fff; }
+#submit-btn:disabled { background-color: #ccc; }
+
+#feedback-area { display: none; margin-top: 25px; padding-top: 20px; border-top: 2px dashed var(--border-light); }
+.judge-text { font-size: 1.5rem; font-weight: bold; margin-bottom: 10px; text-align: center; }
+.judge-text.correct { color: var(--correct); }
+.judge-text.incorrect { color: var(--incorrect); }
+.exp-text { font-size: 1rem; margin-bottom: 20px; background: #f9f9f9; padding: 15px; border-radius: 8px; line-height: 1.8; }
+#next-btn { background-color: var(--primary-navy); color: #fff; }
+
+#result-screen { display: none; text-align: center; }
+.score-text { font-size: 2rem; font-weight: bold; color: var(--primary-navy); margin-bottom: 10px; }
+.message-text { font-size: 1.2rem; margin-bottom: 30px; font-weight: bold; }
+
+/* =========================================
+   無料版（ruck.html）専用のハイライト装飾
+========================================= */
+.free-highlight {
+  border-color: #af534c !important;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+}
+
+/* =========================================
+   9. お気に入り機能のデザイン
+========================================= */
+.fav-mode-btn {
+  border-color: #fbc02d;
+  color: #f57f17;
+  background-color: #fffde7;
+  font-size: 1.05rem;
+}
+.fav-mode-btn:hover {
+  background-color: #fff9c4;
+}
+
+.fav-icon {
+  float: right;
+  font-size: 1.8rem;
+  color: #ccc;
+  cursor: pointer;
+  line-height: 1;
+  margin-top: -5px; /* 位置の微調整 */
+  transition: transform 0.2s, color 0.2s;
+  user-select: none; /* スマホで長押し選択されるのを防ぐ */
+}
+.fav-icon:hover {
+  transform: scale(1.1);
+}
+.fav-icon.active {
+  color: #fbc02d; /* お気に入り登録時の色（ゴールド） */
+  text-shadow: 0 0 5px rgba(251, 192, 45, 0.4);
+}
+
+/* =========================================
+   学習メモ機能のデザイン
+========================================= */
+.memo-area {
+  background-color: #fff9c4; /* 付箋風の黄色背景 */
+  border: 1px solid #fbc02d;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 15px 0;
+  text-align: left;
+}
+
+#q-memo {
+  width: 100%;
+  height: 60px;
+  margin-top: 5px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  resize: vertical; /* 縦方向のみサイズ変更可能 */
+  box-sizing: border-box;
+}
+
+.link {
+  margin-top: 10px;
+}

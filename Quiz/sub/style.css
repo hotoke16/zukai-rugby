@@ -1,0 +1,275 @@
+/* =========================================
+   CSS: ベース設定と変数
+========================================= */
+:root {
+  --primary-color: #2e7d32; /* メインカラー（芝生のようなグリーン） */
+  --primary-hover: #1b5e20;
+  --accent-color: #f9a825;  /* アクセントカラー（イエロー/ゴールド） */
+  --correct-color: #e53935; /* 正解時のカラー（レッド） */
+  --incorrect-color: #1e88e5; /* 不正解時のカラー（ブルー） */
+  --bg-color: #f5f7fa;
+  --text-color: #333333;
+  --card-bg: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* =========================================
+   1. 難易度選択エリア
+========================================= */
+.difficulty-selector {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-color);
+  padding: 10px 0;
+  z-index: 100;
+}
+
+.diff-btn {
+  flex: 1;
+  max-width: 150px;
+  padding: 12px 10px;
+  border: 2px solid var(--primary-color);
+  background-color: var(--card-bg);
+  color: var(--primary-color);
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.diff-btn:hover {
+  background-color: #e8f5e9;
+}
+
+.diff-btn.active {
+  background-color: var(--primary-color);
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(46, 125, 50, 0.3);
+}
+
+/* =========================================
+   2. クイズ表示エリア
+========================================= */
+.quiz-card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+}
+
+.question-header {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+.question-text {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.question-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
+  border-radius: 8px;
+}
+
+/* 選択肢ボタン（縦並び） */
+.choices-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.choice-btn {
+  width: 100%;
+  padding: 16px 20px;
+  background-color: #fff;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.choice-btn:hover:not(:disabled) {
+  border-color: var(--primary-color);
+  background-color: #fafafa;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.choice-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* =========================================
+   3. フィードバック＆解説エリア（初期非表示）
+========================================= */
+.feedback-area {
+  display: none;
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.judgement {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.judgement.correct { color: var(--correct-color); }
+.judgement.incorrect { color: var(--incorrect-color); }
+
+.explanation {
+  font-size: 1rem;
+  text-align: left;
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+.next-btn {
+  display: inline-block;
+  padding: 14px 40px;
+  background-color: var(--accent-color);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(249, 168, 37, 0.4);
+  transition: all 0.2s ease;
+}
+
+.next-btn:hover {
+  background-color: #f57f17;
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   4. 結果画面
+========================================= */
+.result-area {
+  display: none;
+  text-align: center;
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 40px 20px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+}
+
+.score-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.message-text {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.retry-btn {
+  padding: 12px 30px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.retry-btn:hover { background-color: var(--primary-hover); }
+
+/* =========================================
+   メディアクエリ（スマホ対応）
+========================================= */
+@media (max-width: 600px) {
+  .quiz-card { padding: 20px 15px; }
+  .choice-btn { font-size: 1rem; padding: 14px; }
+  .diff-btn { font-size: 0.9rem; padding: 10px 5px; }
+}
+
+/* =========================================
+   追加：複数選択と回答ボタンのスタイル
+========================================= */
+/* 選択中のボタンデザイン */
+.choice-btn.selected {
+  border-color: var(--primary-color);
+  background-color: #e8f5e9;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* 回答後に正解の選択肢を目立たせる */
+.choice-btn.is-correct-ans {
+  border-color: var(--correct-color);
+  background-color: #ffebee;
+}
+
+/* 回答するボタン */
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  margin-top: 20px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background-color: var(--primary-hover);
+}
+
+.link {
+  margin-top: 10px;
+}
