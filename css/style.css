@@ -190,6 +190,10 @@ body.is-fixed {
   overflow: hidden;
 }
 
+.affiliate {
+  margin-top: 10px;
+}
+
 .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
