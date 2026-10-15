@@ -82,7 +82,7 @@ body {
 
 .nav-grid-buttons {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* PC時は4列 */
+  grid-template-columns: repeat(3, 1fr); /* PC時は4列 */
   gap: 10px;
 }
 

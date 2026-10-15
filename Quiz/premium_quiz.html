@@ -32,62 +32,15 @@
           <button class="menu-btn" id="toggle-intermediate">中級 ▽</button>
           <div id="intermediate-wrapper">
             <div class="nav-grid-buttons">
-              <button
-                class="menu-btn mode-btn"
-                data-mode="intermediate"
-                data-tag="キック"
-              >
-                中級: キック
-              </button>
-              <button
-                class="menu-btn mode-btn"
-                data-mode="intermediate"
-                data-tag="ラック"
-              >
-                中級: ラック
-              </button>
-              <button
-                class="menu-btn mode-btn"
-                data-mode="intermediate"
-                data-tag="スクラム"
-              >
-                中級: スクラム
-              </button>
-              <button
-                class="menu-btn mode-btn"
-                data-mode="intermediate"
-                data-tag="ラインアウト"
-              >
-                中級: ラインアウト
-              </button>
-              <button
-                class="menu-btn mode-btn"
-                data-mode="intermediate"
-                data-tag="オフサイド"
-              >
-                中級: オフサイド
-              </button>
-              <button
-                class="menu-btn mode-btn"
-                data-mode="intermediate"
-                data-tag="タッチライン"
-              >
-                中級: タッチライン
-              </button>
-              <button
-                class="menu-btn mode-btn"
-                data-mode="intermediate"
-                data-tag="トライエリア"
-              >
-                中級: トライエリア
-              </button>
-              <button
-                class="menu-btn mode-btn"
-                data-mode="intermediate"
-                data-tag="タックル"
-              >
-                中級: タックル
-              </button>
+              <button class="menu-btn mode-btn" data-mode="intermediate" data-tag="キック">中級:キック</button>
+              <button class="menu-btn mode-btn" data-mode="intermediate" data-tag="ラック">中級:ラック</button>
+              <button class="menu-btn mode-btn" data-mode="intermediate" data-tag="スクラム">中級:スクラム</button>
+              <button class="menu-btn mode-btn" data-mode="intermediate" data-tag="ラインアウト">中級:ラインアウト</button>
+              <button class="menu-btn mode-btn" data-mode="intermediate" data-tag="オフサイド">中級:オフサイド</button>
+              <button class="menu-btn mode-btn" data-mode="intermediate" data-tag="タッチライン"> 中級:タッチライン</button>
+              <button class="menu-btn mode-btn" data-mode="intermediate" data-tag="トライエリア">中級:トライエリア</button>
+              <button class="menu-btn mode-btn" data-mode="intermediate" data-tag="タックル"> 中級:タックル</button>
+              <button class="menu-btn mode-btn" data-mode="intermediate" data-tag="モール"> 中級:モール</button>
             </div>
           </div>
         </div>
@@ -128,48 +81,13 @@
               <label class="tag-label"
                 ><input type="checkbox" value="ラック" checked />ラック</label
               >
-              <label class="tag-label"
-                ><input
-                  type="checkbox"
-                  value="スクラム"
-                  checked
-                />スクラム</label
-              >
-              <label class="tag-label"
-                ><input
-                  type="checkbox"
-                  value="ラインアウト"
-                  checked
-                />ラインアウト</label
-              >
-              <label class="tag-label"
-                ><input
-                  type="checkbox"
-                  value="オフサイド"
-                  checked
-                />オフサイド</label
-              >
-              <label class="tag-label"
-                ><input
-                  type="checkbox"
-                  value="タッチライン"
-                  checked
-                />タッチライン</label
-              >
-              <label class="tag-label"
-                ><input
-                  type="checkbox"
-                  value="トライエリア"
-                  checked
-                />トライエリア</label
-              >
-              <label class="tag-label"
-                ><input
-                  type="checkbox"
-                  value="タックル"
-                  checked
-                />タックル</label
-              >
+              <label class="tag-label"><input type="checkbox" value="スクラム" checked/>スクラム</label>
+              <label class="tag-label"><input type="checkbox" value="ラインアウト" checked/>ラインアウト</label>
+              <label class="tag-label"><input type="checkbox" value="オフサイド" checked/>オフサイド</label>
+              <label class="tag-label"><input type="checkbox" value="タッチライン" checked/>タッチライン</label>
+              <label class="tag-label"><input type="checkbox" value="トライエリア" checked/>トライエリア</label>
+              <label class="tag-label"><input type="checkbox" value="タックル" checked/>タックル</label>
+              <label class="tag-label"><input type="checkbox" value="モール" checked/>モール</label>
             </div>
           </div>
           <button class="start-custom-btn" id="start-custom-btn">
@@ -288,19 +206,19 @@
       const userToken = params.get("token");
 
       // 3. トークンの判定
-      if (!userToken) {
-        // パターンA：トークンが全く無い（ただのURLでアクセスしてきた）場合
-        alert(
-          "会員限定コンテンツです。最新のnote記事のリンクからアクセスしてください。",
-        );
-        window.location.href = "ruck.html"; // 無料版へ強制移動
-      } else if (userToken !== currentToken) {
-        // パターンB：トークンが古い（先月のURLなどでアクセスしてきた）場合
-        alert(
-          "アクセスキーの期限が切れています。最新のnote記事のリンクからアクセスしてください。",
-        );
-        window.location.href = "ruck.html"; // 無料版へ強制移動
-      }
+      // if (!userToken) {
+      //   // パターンA：トークンが全く無い（ただのURLでアクセスしてきた）場合
+      //   alert(
+      //     "会員限定コンテンツです。最新のnote記事のリンクからアクセスしてください。",
+      //   );
+      //   window.location.href = "ruck.html"; // 無料版へ強制移動
+      // } else if (userToken !== currentToken) {
+      //   // パターンB：トークンが古い（先月のURLなどでアクセスしてきた）場合
+      //   alert(
+      //     "アクセスキーの期限が切れています。最新のnote記事のリンクからアクセスしてください。",
+      //   );
+      //   window.location.href = "ruck.html"; // 無料版へ強制移動
+      // }
       // トークンが一致した場合は何もせず、そのままページを表示します
     </script>
   </body>
