@@ -206,19 +206,19 @@
       const userToken = params.get("token");
 
       // 3. トークンの判定
-      // if (!userToken) {
-      //   // パターンA：トークンが全く無い（ただのURLでアクセスしてきた）場合
-      //   alert(
-      //     "会員限定コンテンツです。最新のnote記事のリンクからアクセスしてください。",
-      //   );
-      //   window.location.href = "ruck.html"; // 無料版へ強制移動
-      // } else if (userToken !== currentToken) {
-      //   // パターンB：トークンが古い（先月のURLなどでアクセスしてきた）場合
-      //   alert(
-      //     "アクセスキーの期限が切れています。最新のnote記事のリンクからアクセスしてください。",
-      //   );
-      //   window.location.href = "ruck.html"; // 無料版へ強制移動
-      // }
+      if (!userToken) {
+        // パターンA：トークンが全く無い（ただのURLでアクセスしてきた）場合
+        alert(
+          "会員限定コンテンツです。最新のnote記事のリンクからアクセスしてください。",
+        );
+        window.location.href = "ruck.html"; // 無料版へ強制移動
+      } else if (userToken !== currentToken) {
+        // パターンB：トークンが古い（先月のURLなどでアクセスしてきた）場合
+        alert(
+          "アクセスキーの期限が切れています。最新のnote記事のリンクからアクセスしてください。",
+        );
+        window.location.href = "ruck.html"; // 無料版へ強制移動
+      }
       // トークンが一致した場合は何もせず、そのままページを表示します
     </script>
   </body>
