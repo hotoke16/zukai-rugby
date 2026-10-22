@@ -121,3 +121,28 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+// banner.js
+
+$(document).ready(function() {
+  // ★ ここに最新のAmazonアソシエイトリンクを入れます
+  const affiliateUrl = "https://www.amazon.co.jp/gp/video/detail/B0HLS4LHPW?&linkCode=sl2&tag=zukairugby-22&linkId=804a22ed9ff38982deacccf39fb460f2&ref_=as_li_ss_tl";
+
+  // バナーのHTML（デザインやテキストを変えたい時もここをいじるだけで全ページに反映されます）
+  const bannerHTML = `
+    <div class="affiliate-banner">
+      <a href="${affiliateUrl}" target="_blank" rel="noopener noreferrer">
+        <div class="banner-content">
+          <div class="banner-text">
+            <span class="banner-title">J SPORTS でラグビー観戦 🏉</span>
+            <span class="banner-sub">Amazon Prime Videoで国内外の試合をライブ配信中！</span>
+          </div>
+          <span class="banner-arrow">▶︎</span>
+        </div>
+      </a>
+    </div>
+  `;
+
+  // ページ内の id="banner-container" の場所にバナーを挿入する
+  $('#banner-container').html(bannerHTML);
+});
