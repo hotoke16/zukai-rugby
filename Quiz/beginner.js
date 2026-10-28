@@ -112,7 +112,7 @@ $(document).ready(function() {
         <div class="banner-content">
           <div class="banner-text">
             <span class="banner-title">J SPORTS でラグビー観戦 🏉</span>
-            <span class="banner-sub">Amazon Prime Videoで国内外の試合をライブ配信中！</span>
+            <span class="banner-sub">10/24 の日本vsフィジー戦を振り返ろう！</span>
           </div>
           <span class="banner-arrow">▶︎</span>
         </div>
