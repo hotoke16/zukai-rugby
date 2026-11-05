@@ -109,7 +109,7 @@ const beginnerData = [
 
 $(document).ready(function() {
   // ★ ここに最新のAmazonアソシエイトリンクを入れます
-  const affiliateUrl = "https://www.amazon.co.jp/gp/video/detail/B0HLS4LHPW?&linkCode=sl2&tag=zukairugby-22&linkId=804a22ed9ff38982deacccf39fb460f2&ref_=as_li_ss_tl";
+  const affiliateUrl = "https://link.amazon/A0dsCczIA";
 
   // バナーのHTML（デザインやテキストを変えたい時もここをいじるだけで全ページに反映されます）
   const bannerHTML = `
@@ -118,7 +118,7 @@ $(document).ready(function() {
         <div class="banner-content">
           <div class="banner-text">
             <span class="banner-title">J SPORTS でラグビー観戦 🏉</span>
-            <span class="banner-sub">10/24 の日本vsフィジー戦を振り返ろう！</span>
+            <span class="banner-sub">ネーションズチャンピオンシップを応援しよう！</span>
           </div>
           <span class="banner-arrow">▶︎</span>
         </div>
