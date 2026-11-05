@@ -19,6 +19,7 @@ const beginnerData = [
     ans: [2],
     tags: ["基本", "インゴール"],
     exp: "インゴールエリアにボールを置くとトライになり、得点が入ります。",
+    expImage: "../img/30.トライエリア (1).jpg"
   },
   {
     id: "b03",
@@ -64,6 +65,7 @@ const beginnerData = [
     ans: [1],
     tags: ["基本", "スクラム"],
     exp: "Crouch（クラウチ）、Bind（バインド）、Set（セット）の順でコールされます。",
+    expImage: "../img/25.スクラム (4).jpg"
   },
   {
     id: "b08",
