@@ -266,15 +266,19 @@ $('#submit-btn').on('click', function() {
     
     $('#exp-text').html(`<strong>解説：</strong><br>${qData.exp}`);
     
-    // ★ここから追記：問題の解説が出たタイミングで、過去のメモを読み込む
-    const memos = getMemos();
-    if (qData.id && memos[qData.id]) {
-      $('#q-memo').val(memos[qData.id]); // 保存されているメモがあればセット
+    // ★ここから追加：解説画像がある場合は「フワッと」表示する
+    if (qData.expImage) {
+      // 画像のURLをセット
+      $('#exp-image').attr('src', qData.expImage);
+      // 一度隠した状態から、200ミリ秒待って、800ミリ秒かけてゆっくりフワッと出す（数字は好みで調整可）
+      $('#exp-image-area').hide().delay(200).fadeIn(800); 
     } else {
-      $('#q-memo').val(''); // なければテキストエリアを空にする
+      // 画像がない問題の場合は隠しておく
+      $('#exp-image-area').hide();
     }
-    // ★追記ここまで
+    // ★追加ここまで
 
     $('#feedback-area').fadeIn(400);
   });
 });
+
