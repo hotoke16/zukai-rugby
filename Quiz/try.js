@@ -366,4 +366,26 @@ let currentQuestions = [];
     $('#memo-saved-msg').fadeIn(200).delay(1500).fadeOut(200);
   });
 
+  $('#submit-btn').on('click', function() {
+    const qData = currentQuestions[currentIndex];
+    
+    // 〜〜〜 (既存の正誤判定などのコード) 〜〜〜
+    
+    $('#exp-text').html(`<strong>解説：</strong><br>${qData.exp}`);
+    
+    // ★ここから追加：解説画像がある場合は「フワッと」表示する
+    if (qData.expImage) {
+      // 画像のURLをセット
+      $('#exp-image').attr('src', qData.expImage);
+      // 一度隠した状態から、200ミリ秒待って、800ミリ秒かけてゆっくりフワッと出す（数字は好みで調整可）
+      $('#exp-image-area').hide().delay(200).fadeIn(800); 
+    } else {
+      // 画像がない問題の場合は隠しておく
+      $('#exp-image-area').hide();
+    }
+    // ★追加ここまで
+
+    $('#feedback-area').fadeIn(400);
+  });
+
 });
