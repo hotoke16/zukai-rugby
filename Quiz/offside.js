@@ -348,25 +348,45 @@ let currentQuestions = [];
     $('#memo-saved-msg').fadeIn(200).delay(1500).fadeOut(200);
   });
 
-$('#submit-btn').on('click', function() {
+// 「解答する」ボタンが押された時の処理
+  $('#submit-btn').on('click', function() {
     const qData = currentQuestions[currentIndex];
     
-    // 〜〜〜 (既存の正誤判定などのコード) 〜〜〜
+    // 〜〜〜 (既存の正誤判定などのコードはそのまま残します) 〜〜〜
     
+    // 解説テキストをセット
     $('#exp-text').html(`<strong>解説：</strong><br>${qData.exp}`);
     
-    // ★ここから追加：解説画像がある場合は「フワッと」表示する
-    if (qData.expImage) {
-      // 画像のURLをセット
-      $('#exp-image').attr('src', qData.expImage);
-      // 一度隠した状態から、200ミリ秒待って、800ミリ秒かけてゆっくりフワッと出す（数字は好みで調整可）
-      $('#exp-image-area').hide().delay(200).fadeIn(800); 
+    // ==========================================
+    // ★ここから変更：複数画像対応の表示処理
+    // ==========================================
+    // まず、前回の問題の画像を綺麗に消去（リセット）する
+    $('#exp-image-container').empty();
+
+    // qData.expImages が存在し、かつ中身が1枚以上あるかチェック
+    if (qData.expImages && qData.expImages.length > 0) {
+      
+      // 画像リストの中身を1つずつ取り出してHTMLに追加
+      qData.expImages.forEach(function(imgSrc) {
+        $('#exp-image-container').append(
+          `<img src="${imgSrc}" alt="解説図解" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">`
+        );
+      });
+      
+      // 準備ができたらフワッと表示
+      $('#exp-image-area').hide().delay(200).fadeIn(800);
+      
     } else {
       // 画像がない問題の場合は隠しておく
       $('#exp-image-area').hide();
     }
-    // ★追加ここまで
+    // ==========================================
+    // ★変更ここまで
+    // ==========================================
 
+    // メモ機能などの処理（有料版のみ）...
+
+    // 最後にフィードバックエリア全体を表示
     $('#feedback-area').fadeIn(400);
   });
 
