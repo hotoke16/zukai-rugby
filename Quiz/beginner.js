@@ -6,7 +6,7 @@ const beginnerData = [
     ans: [1, 2],
     tags: ["基本"],
     exp: "ラグビーは自由なスポーツ、ボールを持って蹴ったり、走ったりできます。",
-    expImage: "../img/2.自由さ (1).jpg"
+    expImages: ["../img/2.自由さ (1).jpg"]
   },
   {
     id: "b02",
@@ -19,7 +19,7 @@ const beginnerData = [
     ans: [2],
     tags: ["基本", "インゴール"],
     exp: "トライエリア（インゴールエリア）にボールを置くとトライになり、得点が入ります。",
-    expImage: "../img/30.トライエリア (1).jpg"
+    expImages: ["../img/30.トライエリア (1).jpg"]
   },
   {
     id: "b03",
@@ -52,7 +52,7 @@ const beginnerData = [
     ans: [0],
     tags: ["基本", "キック", "ラインアウト"],
     exp: "ペナルティーキックによるタッチへのキックは、蹴った側のボール投入でラインアウトが再開されます。",
-    expImage: "../img/10.キックの出し方 (4).JPG"
+    expImages: ["../img/10.キックの出し方 (4).JPG"]
   },
   {
     id: "b07",
@@ -65,7 +65,7 @@ const beginnerData = [
     ans: [1],
     tags: ["基本", "スクラム"],
     exp: "Crouch（クラウチ）、Bind（バインド）、Set（セット）の順でコールされます。",
-    expImage: "../img/25.スクラム (4).jpg"
+    expImages: ["../img/25.スクラム (4).jpg"]
   },
   {
     id: "b08",
@@ -87,7 +87,7 @@ const beginnerData = [
     ans: [2],
     tags: ["基本", "ラック", "反則"],
     exp: "ボールを離す（リリース）することができない反則名は、ノットリリースザボールです。",
-    expImage: "../img/8.スチール (2).JPG"
+    expImages: ["../img/8.スチール (2).JPG"]
   },
   {
     id: "b10",
@@ -101,7 +101,7 @@ const beginnerData = [
     ans: [1],
     tags: ["基本", "反則"],
     exp: "ペナルティが起きると、反則をしていない側の手を斜め上に上げます",
-    expImage: "../img/28.レフリーシグナル① (2).jpg"
+    expImages: ["../img/28.レフリーシグナル① (2).jpg"]
   },
 ];
 

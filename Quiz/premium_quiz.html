@@ -109,9 +109,12 @@
         <div id="feedback-area" style="display: none">
           <div class="judge-text" id="judge-text"></div>
           
-          <div id="exp-image-area" style="display: none; text-align: center; margin: 15px 0;">
-            <img id="exp-image" src="" alt="解説図解" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-          </div>
+        <div id="exp-image-area" style="display: none; text-align: center; margin: 15px 0;">
+        <!-- 複数の画像が縦に並ぶ際、すき間（gap）が自動で15px空くように設定 -->
+          <div id="exp-image-container" style="display: flex; flex-direction: column; gap: 15px;">
+          <!-- ここにJavaScriptが自動で画像タグを挿入します -->
+        </div>
+      </div>
           
           <div class="exp-text" id="exp-text"></div>
 

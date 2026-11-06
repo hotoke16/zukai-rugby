@@ -14,7 +14,7 @@ const intermediateData = [
     ans: [0],
     tags: ["キック"],
     exp: "22mライン内側からは思い切って外に出すことができます。",
-    expImage: "../img/10.キックの出し方 (1).JPG"
+    expImages: ["../img/10.キックの出し方 (1).JPG"]
   },
   {
     id: "k02",
@@ -28,7 +28,7 @@ const intermediateData = [
     ans: [1],
     tags: ["キック"],
     exp: "22mライン外側の場合、直接外に蹴り出しては前進できません。",
-    expImage: "../img/10.キックの出し方 (3).JPG"
+    expImages: ["../img/10.キックの出し方 (3).JPG"]
   },
   {
     id: "k03",
@@ -42,7 +42,7 @@ const intermediateData = [
     ans: [0],
     tags: ["キック"],
     exp: "22mライン外側の場合、ワンバウンド以上させれば蹴って前進することができます。",
-    expImage: "../img/10.キックの出し方 (2).JPG"
+    expImage: "../img/30.トライエリア (1).jpg"
   },
   {
     id: "k04",
@@ -56,7 +56,7 @@ const intermediateData = [
     ans: [2],
     tags: ["キック"],
     exp: "50 22といい、前進してかつマイボールで再開できます。",
-    expImage: "../img/11.キックの出し方 (1).JPG"
+    expImages: ["../img/11.キックの出し方 (1).JPG"]
   },
   {
     id: "k05",
@@ -70,7 +70,7 @@ const intermediateData = [
     ans: [2],
     tags: ["キック"],
     exp: "前進でき、かつマイボールで再開できます。",
-    expImage: "../img/10.キックの出し方 (4).JPG"
+    expImages: ["../img/10.キックの出し方 (4).JPG"]
   },
   {
     id: "k06",
@@ -84,7 +84,7 @@ const intermediateData = [
     ans: [1],
     tags: ["キック"],
     exp: "ペナルティキックとは異なり、通常のキックの扱いになり、ダイレクトタッチでは前進できません。",
-    expImage: "../img/10.キックの出し方 (3).JPG"
+    expImages: ["../img/10.キックの出し方 (3).JPG"]
   },
   {
     id: "k07",
@@ -98,7 +98,7 @@ const intermediateData = [
     ans: [2, 3],
     tags: ["キック", "トライエリア"],
     exp: "ディフェンス側はスクラムか22mラインドロップアウトかを選択できます。",
-    expImage: "../img/11.キックの出し方 (2).JPG"
+    expImages: ["../img/11.キックの出し方 (2).JPG"]
   },
   {
     id: "k08",
@@ -107,6 +107,7 @@ const intermediateData = [
     ans: [0],
     tags: ["キック", "得点"],
     exp: "コンバージョンキックはトライが与えられた時点から60秒以内に蹴らなければなりません。",
+    expImages: ["../img/70.ペナルティゴール時間 (2).jpg"]
   },
   {
     id: "k09",
@@ -119,6 +120,7 @@ const intermediateData = [
     ans: [2],
     tags: ["キック", "得点", "トライエリア"],
     exp: "ペナルティゴールによってデッドになった場合は22mラインドロップアウトで再開されます。",
+    expImages: ["../img/103.キックの出し方④ (4).jpg"]
   },
   {
     id: "k10",
@@ -131,6 +133,7 @@ const intermediateData = [
     ans: [0],
     tags: ["キック"],
     exp: "ペナルティゴールは60秒以内に蹴らなければならず、時間を超えてしまった場合、相手ボールのスクラムになってしまいます。",
+    expImages: ["../img/70.ペナルティゴール時間 (2).jpg","../img/70.ペナルティゴール時間 (3).jpg"]
   },
 
   {
@@ -140,6 +143,7 @@ const intermediateData = [
     ans: [0, 1, 2, 3],
     tags: ["キック"],
     exp: "ペナルティキックは、キック・スクラム・ペナルティゴール・クイックスタートすべて選択できます。キックは、外に蹴り出すと出た地点からマイボールラインアウトで再開できます。",
+    expImages: ["../img/9.ペナルティキックオプション (1).JPG","../img/9.ペナルティキックオプション (2).JPG","../img/9.ペナルティキックオプション (3).JPG","../img/9.ペナルティキックオプション (4).JPG"]
   },
   {
     id: "k12",
