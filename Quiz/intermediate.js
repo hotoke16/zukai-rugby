@@ -14,6 +14,7 @@ const intermediateData = [
     ans: [0],
     tags: ["キック"],
     exp: "22mライン内側からは思い切って外に出すことができます。",
+    expImage: "../img/10.キックの出し方 (1).JPG"
   },
   {
     id: "k02",
@@ -27,6 +28,7 @@ const intermediateData = [
     ans: [1],
     tags: ["キック"],
     exp: "22mライン外側の場合、直接外に蹴り出しては前進できません。",
+    expImage: "../img/10.キックの出し方 (3).JPG"
   },
   {
     id: "k03",
@@ -40,6 +42,7 @@ const intermediateData = [
     ans: [0],
     tags: ["キック"],
     exp: "22mライン外側の場合、ワンバウンド以上させれば蹴って前進することができます。",
+    expImage: "../img/10.キックの出し方 (2).JPG"
   },
   {
     id: "k04",
@@ -53,6 +56,7 @@ const intermediateData = [
     ans: [2],
     tags: ["キック"],
     exp: "50 22といい、前進してかつマイボールで再開できます。",
+    expImage: "../img/11.キックの出し方 (1).JPG"
   },
   {
     id: "k05",
@@ -66,6 +70,7 @@ const intermediateData = [
     ans: [2],
     tags: ["キック"],
     exp: "前進でき、かつマイボールで再開できます。",
+    expImage: "../img/10.キックの出し方 (4).JPG"
   },
   {
     id: "k06",
@@ -79,6 +84,7 @@ const intermediateData = [
     ans: [1],
     tags: ["キック"],
     exp: "ペナルティキックとは異なり、通常のキックの扱いになり、ダイレクトタッチでは前進できません。",
+    expImage: "../img/10.キックの出し方 (3).JPG"
   },
   {
     id: "k07",
@@ -92,6 +98,7 @@ const intermediateData = [
     ans: [2, 3],
     tags: ["キック", "トライエリア"],
     exp: "ディフェンス側はスクラムか22mラインドロップアウトかを選択できます。",
+    expImage: "../img/11.キックの出し方 (2).JPG"
   },
   {
     id: "k08",
