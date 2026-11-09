@@ -42,7 +42,7 @@ const intermediateData = [
     ans: [0],
     tags: ["キック"],
     exp: "22mライン外側の場合、ワンバウンド以上させれば蹴って前進することができます。",
-    expImage: "../img/30.トライエリア (1).jpg"
+    expImage: "../img/10.キックの出し方 (2).JPG.jpg"
   },
   {
     id: "k04",
@@ -217,6 +217,7 @@ const intermediateData = [
     ans: [2],
     tags: ["ラック"],
     exp: "両チームのプレイヤーが組み合ったら成立します。アタック１人だけが入ったらワンサイドラックです。",
+    expImages: ["../img/14.ラック (3).JPG"]
   },
   {
     id: "r02",
@@ -225,6 +226,7 @@ const intermediateData = [
     ans: [1],
     tags: ["ラック", "反則"],
     exp: "ラック成立後に手を使ってしまうと、ハンドの反則になります。",
+    expImages: ["../img/14.ラック (4).JPG"]
   },
   {
     id: "r03",
@@ -281,6 +283,7 @@ const intermediateData = [
     ans: [3],
     tags: ["ラック", "反則"],
     exp: "タックラーはすみやかにロールアウェイをして、ラックから退かなければなりません。",
+    expImages: ["../img/19.ノットロールアウェイ (3).JPG"]
   },
   {
     id: "r07",
@@ -295,6 +298,7 @@ const intermediateData = [
     ans: [4],
     tags: ["ラック", "反則", "タックル"],
     exp: "タックラーはタックル成立後、ボールキャリアーを一度離す必要があります。",
+    expImages: ["../img/23.ホールディング (2).JPG"]
   },
   {
     id: "r08",
@@ -303,6 +307,7 @@ const intermediateData = [
     ans: [0],
     tags: ["ラック", "反則", "タックル"],
     exp: "ボールを一度置いている（リリースしている）ので、問題ありません。",
+    expImages: ["../img/50.ピックゴー (2).jpg","../img/50.ピックゴー (3).jpg"]
   },
   {
     id: "r09",
